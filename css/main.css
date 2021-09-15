@@ -54,6 +54,7 @@ a {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 60%;
+  height: calc(100vh - 60px);
   border: 2px solid red;
 }
 #top #top-div .container {
@@ -72,9 +73,27 @@ a {
   -webkit-text-stroke: 10px #fff;
 }
 #top #to-top-btn {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   border: solid 5px #B3424A;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 20px 20px 0;
+  transform: rotate(45deg);
+  cursor: pointer;
+  background-color: #fff;
+}
+#top #to-top-btn a {
+  border-top: solid 4px #B3424A;
+  border-left: solid 4px #B3424A;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
 }
 
 #contact {
