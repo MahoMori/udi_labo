@@ -1,1 +1,50 @@
 // home, contact
+
+@use "abstracts" as *;
+
+#who-we-are {
+    height: 600px;
+    width: 100%;
+    border: red 2px solid;
+
+    .title {
+        margin: 20px 0;
+
+        &::after {
+            @include triangleBgStyle;
+        }
+    }
+
+    .title h1 {
+        @include titleStyle;
+    }
+
+    .content {
+        @include contentStyle;
+    }
+}
+
+#our-services {
+    height: 600px;
+    width: 100%;
+    border: red 2px solid;
+
+    .title {
+        margin: 20px 0;
+
+        &::after {
+            @include triangleBgStyle;
+            top: 200%;
+        }
+    }
+
+    .title h1 {
+        @include titleStyle;
+    }
+
+    .content {
+        @include contentStyle;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

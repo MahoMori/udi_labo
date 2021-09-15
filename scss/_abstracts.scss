@@ -4,4 +4,60 @@ $colors: (
     navy: #333C5E,
     darkred: #B3424A,
     grey: #C4C4C4
-)
+);
+
+@mixin robotoC {
+    font-family: 'Roboto Condensed', sans-serif;
+    // font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+}
+
+@mixin bgImgStyle {
+    background-image: url("../images/geometric_img.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60%;
+}
+
+@mixin titleStyle {
+    color: #fff;
+    background-color: map-get($colors, darkred);
+    text-align: right;
+    width: 30%;
+    padding: 8px;
+    font-size: 2rem;
+}
+
+@mixin triangleBgStyle {
+    content: '';
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    background-color: map-get($colors, grey);
+    width: 1250px;
+    height: 500px;
+    top: 108%;
+    left: 2%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+@mixin contentStyle {
+    width: 90%;
+    margin: 30px auto 0 auto;
+}
+
+@mixin btnStyle {
+    border-bottom: solid 3px map-get($colors, darkred);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    margin: 10px 0;
+}

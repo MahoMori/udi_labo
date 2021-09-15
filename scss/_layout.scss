@@ -1,1 +1,235 @@
 // nav, header, footer, form
+
+@use "abstracts" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clr {
+    clear: both;
+}
+
+
+
+// header
+#top {
+    background-color: map-get($colors, navy);
+    height: 100vh;
+    width: 100%;
+
+    // display: grid;
+    // 最初が60px
+
+    .top-nav-div {
+        // padding: 0 20px;
+        // width: 98%;
+
+    }
+
+    .logo a{
+        color: #fff;
+        font-size: 3rem;
+        @include robotoC;
+        float: left;
+
+        margin: 0 20px;
+    }
+
+    .top-nav-ul {
+        height: 60px;
+        border: 2px solid red;
+    }
+
+    .top-nav-ul li {
+        cursor: pointer;
+        float: left;
+
+        
+        width: 150px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: #fff;
+
+        text-align: center;
+        // margin: 0 20px;
+
+        // &:hover a{
+        //     color: #fff;
+        //     background-color: map-get($colors, navy);
+        // }
+
+        a {
+            // padding: 10px 50px;
+
+            // width: 100px;
+            // height: 50px;
+            // border-radius: 50px;
+            // background-color: #fff;
+            color: map-get($colors, navy);
+        }
+    }
+
+    #top-div {
+        @include robotoC;
+        @include bgImgStyle;
+
+        border: 2px solid red;
+
+
+        .container {        
+            color: #fff;    
+            margin-left: 50px;
+        }
+
+        h1 {
+            font-size: 7rem;
+            margin-bottom: -80px;
+            width: 500px;
+            // border: 2px solid red;
+        }
+
+        span {
+            font-size: 12rem;
+            color: transparent;
+            font-family: 'PT Sans', sans-serif;
+            -webkit-text-stroke: 10px #fff;
+        }
+    }
+
+    #to-top-btn {
+        height: 50px;
+        width: 50px;
+        border: solid 5px map-get($colors, darkred);
+    }
+    
+}
+
+#contact {
+    background-color: map-get($colors, navy);
+    width: 100%;
+    // height: 800px;
+    height: 100vh;
+    position: relative;
+    @include bgImgStyle;
+
+    .title {
+        border: 2px solid red;
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title h1 {
+        @include titleStyle;
+        margin-top: 15px;
+    }
+
+    .content {
+        @include contentStyle;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }    
+
+    .contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        p {
+            color: #fff;
+        }
+
+        span {
+            color: #ff0000;
+        }
+    }
+
+    label {
+        color: #fff;
+
+        &::after {
+            content: '*';
+            color: #ff0000;
+            padding-left: 2px;
+        }
+    }
+
+    input {
+        display: block;
+        background-color: transparent;
+        color: #fff;
+        outline: none;
+        font-size: 1.25rem;
+        padding-bottom: 3px;
+        border-bottom: solid 3px map-get($colors, darkred);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 90%;
+        margin: 5px 0 20px 0;
+    }
+
+    #message {
+        display: block;
+        background-color: transparent;
+        font-size: 1.2rem;
+        padding: 5px;
+        font-family: "Roboto";
+        border: solid 3px map-get($colors, darkred);
+        width: 95%;
+        height: 250px;
+        margin: 10px 0;
+        color: #fff;
+        outline: none;
+        resize: none;
+    }
+    
+    .form-message {
+        grid-column: 1 / span 2;
+    }
+
+    .btn {
+        @include btnStyle;
+    }
+
+    .info {
+        color: #fff;
+    }
+}
+
+footer {
+    color: map-get($colors, navy);
+    height: 70px;
+
+    ul {
+        height: 50%;
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    ul li {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    p {
+        height: 50%;
+        text-align: center;
+        padding-top: 5px;
+    }
+}

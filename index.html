@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <title>UDI</title>
+
+    <!-- roboto condenced -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <!-- pt sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header id="top">
-        <nav>
-            <div>
+        <nav class="top-nav">
+            <div class="top-nav-div">
                 <h1 class="logo"><a href="/">UDI</a></h1>
-                <ul>
+                <ul class="top-nav-ul">
                     <li><a class="current" href="#who-we-are">Who We Are</a></li>
                     <li><a href="#past-cases">Past Cases</a></li>
                     <li><a href="#our-services">Our Services</a></li>
@@ -22,28 +32,31 @@
             </div>
         </nav>
 
-        <div id="top">
+        <div class="clr"></div>
+
+        <div id="top-div">
             <div class="container">
                 <h1><span>U</span>nnatural</h1>
                 <h1><span>D</span>eath</h1>
                 <h1><span>I</span>nvestigation</h1>
             </div>
         </div>
+        <div id="to-top-btn"><a href="#top"></a></div>
     </header>
 
     <section id="who-we-are">
         <div class="title">
-            <div class="triangle-bg">
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus enim repellat perspiciatis, esse ad harum in nihil! Repudiandae distinctio eius eligendi est iusto iure, quod officia vel optio doloribus!</p>
-                </div>
+            <h1>Who We Are</h1>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus enim repellat perspiciatis, esse ad harum in nihil! Repudiandae distinctio eius eligendi est iusto iure, quod officia vel optio doloribus!</p>
             </div>
         </div>
     </section>
 
     <section id="our-services">
         <div class="title">
-            <div class="triangle-bg">
+            <h1>Our Services</h1>
+            <div class="content">
                 <div class="content-left">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus enim repellat perspiciatis, esse ad harum in nihil! Repudiandae distinctio eius eligendi est iusto iure, quod officia vel optio doloribus!</p>
                     <ul>
@@ -68,50 +81,58 @@
 
     <section id="contact">
         <div class="title">
-            <div class="content-left">
-                <form class="contact-form">
-                    <div class="form-left">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" required>
+            <h1>Contact</h1>
+            <div class="content">
+                <div class="content-left">
+                    <form class="contact-form">
+                        <div class="form-left">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="form-right">
+                            <label for="company-name">Company Name</label>
+                            <input type="text" name="company-name" id="company-name">
+                        </div>
+                        <div class="form-email">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" required>
+                        </div>
+                        <div class="form-right">
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phone" id="phone" required>
+                        </div>
+                        <div class="form-message">
+                            <label for="message">Message</label>
+                            <textarea type="text" name="message" id="message" required></textarea>
+                        </div>
+                        <p>(<span>*</span> required)</p>
+                    </form>
+                    <button class="btn">Send</button>
+                </div>
+                <div class="content-right">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51835.82269270928!2d139.52505941994733!3d35.708041877990695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018efaf3759b6e1%3A0x5581ab11f0c6bfd5!2z5pel5pys44CB5p2x5Lqs6YO95q2m6JS16YeO5biC!5e0!3m2!1sja!2sca!4v1631671462564!5m2!1sja!2sca" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <div class="form-right">
-                        <label for="company-name">Company Name</label>
-                        <input type="text" name="company-name" id="company-name">
+                    <div class="info">
+                        <p>Address: Nishi-musashino, Musashino, Tokyo</p>
+                        <p>Phone: 201-801-1201</p>
+                        <p>Email: inquiry@udilab.jp</p>
                     </div>
-                    <div class="form-email">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" required>
-                    </div>
-                    <div class="form-right">
-                        <label for="phone">Phone</label>
-                        <input type="text" name="phone" id="phone" required>
-                    </div>
-                    <div class="form-message">
-                        <label for="message">Message</label>
-                        <input type="text" name="message" id="message" required>
-                    </div>
-                </form>
-                <button class="btn">Send</button>
-            </div>
-            <div class="content-right">
-                <div class="map"></div>
-                <div>
-                    <p>Address: Nishi-musashino, Musashino, Tokyo</p>
-                    <p>Phone: 201-801-1201</p>
-                    <p>Email: inquiry@udilab.jp</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <ul>
-            <li>Organisation Info</li>
-            <li>Career</li>
-            <li>Media Inquiry</li>
-        </ul>
-        <p>Fan made website based on Japanese drama "Unnatural"</p>
-        <div id="to_top_btn"><a href="#top"></a></div>
+        <!-- <div class="footer-div"> -->
+            <ul>
+                <li>Organisation Info</li>
+                <li>Career</li>
+                <li>Media Inquiry</li>
+            </ul>
+            <div class="clr"></div>
+            <p>Fan made website based on Japanese drama "Unnatural"🍋</p>
+        <!-- </div> -->
     </footer>
 </body>
 </html>
