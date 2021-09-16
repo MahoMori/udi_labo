@@ -21,8 +21,6 @@
 
     .content {
         @include contentStyle;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
     }
 
     .btn-div {
@@ -62,8 +60,6 @@
 
     .content {
         @include contentStyle;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0 40px;

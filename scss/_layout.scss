@@ -54,6 +54,10 @@ a {
     .span-d {
         color: map-get($colors, grey);
     }
+    
+    .drawer-hidden {
+        display: none;
+    }
 
     .top-nav-ul {
         height: 60px;
@@ -290,6 +294,11 @@ a {
     .btn {
         @include sendBtnStyle;
         margin: 10px 0;
+    }
+
+    iframe {
+        width: 500px;
+        height: 400px;
     }
 
     .info {

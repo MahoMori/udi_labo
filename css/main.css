@@ -41,12 +41,15 @@ a {
   font-size: 3rem;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.45rem;
   float: left;
   margin: 0 20px;
 }
 #top .span-d {
   color: #C4C4C4;
+}
+#top .drawer-hidden {
+  display: none;
 }
 #top .top-nav-ul {
   height: 60px;
@@ -69,7 +72,7 @@ a {
 #top #top-div {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.45rem;
   background-image: url("../images/geometric_img.png");
   background-repeat: no-repeat;
   background-position: right;
@@ -183,6 +186,8 @@ a {
 #contact .content {
   width: 90%;
   margin: 30px auto 0 auto;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0 40px;
@@ -256,6 +261,10 @@ a {
 }
 #contact .btn:hover {
   transform: skewX(-15deg);
+}
+#contact iframe {
+  width: 500px;
+  height: 400px;
 }
 #contact .info {
   color: #fff;
@@ -424,61 +433,483 @@ footer p {
 
 /* Smartphone */
 @media (max-width: 500px) {
-  .drawer-hidden {
-    display: none;
+  * {
+    overflow-x: hidden;
   }
 
-  /* ハンバーガーアイコンの設置スペース */
-  .drawer-open {
+  #top {
+    background-color: #333C5E;
+    height: 400px;
+    width: 100%;
+    /* ハンバーガーアイコンの設置スペース */
+    /* ハンバーガーメニューのアイコン */
+    /* 三本線のうち一番上の棒の位置調整 */
+    /* 三本線のうち一番下の棒の位置調整 */
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  }
+  #top .top-nav {
+    background-color: #333C5E;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    z-index: 1;
+  }
+  #top .logo {
+    display: none;
+  }
+  #top .logo a {
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.45rem;
+    float: left;
+    margin: 0 20px;
+  }
+  #top .span-d {
+    color: #C4C4C4;
+  }
+  #top .drawer-hidden {
+    display: none;
+  }
+  #top .drawer-open {
     display: flex;
-    height: 60px;
-    width: 60px;
+    height: 30px;
+    width: 30px;
+    right: 5%;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     z-index: 100;
     /* 重なり順を一番上に */
     cursor: pointer;
   }
-
-  /* ハンバーガーメニューのアイコン */
-  .drawer-open span,
-.drawer-open span:before,
-.drawer-open span:after {
+  #top .drawer-open span,
+#top .drawer-open span:before,
+#top .drawer-open span:after {
     content: "";
     display: block;
     height: 3px;
     width: 25px;
     border-radius: 3px;
-    background: #333;
+    background: #B3424A;
     transition: 0.5s;
     position: absolute;
   }
-
-  /* 三本線のうち一番上の棒の位置調整 */
-  .drawer-open span:before {
+  #top .drawer-open span:before {
     bottom: 8px;
   }
-
-  /* 三本線のうち一番下の棒の位置調整 */
-  .drawer-open span:after {
+  #top .drawer-open span:after {
     top: 8px;
   }
-
-  /* アイコンがクリックされたら真ん中の線を透明にする */
-  #drawer-check:checked ~ .drawer-open span {
+  #top #drawer-check:checked ~ .drawer-open span {
     background: rgba(255, 255, 255, 0);
   }
-
-  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-  #drawer-check:checked ~ .drawer-open span::before {
+  #top #drawer-check:checked ~ .drawer-open span::before {
     bottom: 0;
     transform: rotate(45deg);
   }
-
-  #drawer-check:checked ~ .drawer-open span::after {
+  #top #drawer-check:checked ~ .drawer-open span::after {
     top: 0;
     transform: rotate(-45deg);
+  }
+  #top .top-nav-ul {
+    width: 100%;
+    height: 50vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    color: #fff;
+    transition: 0.5s;
+    background-color: #333C5E;
+  }
+  #top #drawer-check:checked ~ .top-nav-ul {
+    left: 0;
+    /* メニューを画面に入れる */
+  }
+  #top .top-nav-ul li {
+    float: none;
+    cursor: pointer;
+    margin: 13px 35px;
+    padding: 3px 0;
+    font-weight: bold;
+    width: 170px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #fff;
+    text-align: center;
+  }
+  #top .top-nav-ul li a {
+    color: #333C5E;
+  }
+  #top #top-div {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    background-image: url("../images/geometric_img.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 110%;
+    height: 340px;
+    margin-top: 40px;
+    position: absolute;
+    width: 100%;
+  }
+  #top #top-div .container {
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 25px;
+  }
+  #top #top-div h1 {
+    font-size: 3rem;
+    margin-bottom: -40px;
+    width: 100%;
+  }
+  #top #top-div span {
+    font-size: 6.25rem;
+    -webkit-text-stroke: 5px #fff;
+    color: transparent;
+    font-family: "PT Sans", sans-serif;
+  }
+  #top #top-div .span-d {
+    color: #C4C4C4;
+    -webkit-text-stroke: 0px;
+  }
+  #top #to-top-btn {
+    height: 60px;
+    width: 60px;
+    border: solid 5px #B3424A;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 0 20px 20px 0;
+    transform: rotate(45deg);
+    cursor: pointer;
+    background-color: #fff;
+    z-index: 2;
+  }
+  #top #to-top-btn:hover + #goldfish {
+    animation: in 1s forwards;
+  }
+  #top #to-top-btn a {
+    border-top: solid 4px #B3424A;
+    border-left: solid 4px #B3424A;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+  #top #goldfish {
+    height: 50px;
+    width: auto;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 30px 30px;
+    animation: out 1s;
+    z-index: 1;
+  }
+  @keyframes in {
+    0% {
+      margin: 30px 30px;
+    }
+    100% {
+      margin: 0 60px 0 0;
+    }
+  }
+  @keyframes out {
+    0% {
+      margin: 0 60px 0 0;
+    }
+    100% {
+      margin: 30px 30px;
+    }
+  }
+
+  #who-we-are {
+    height: 900px;
+    width: 100%;
+  }
+  #who-we-are .title {
+    margin: 20px 0;
+  }
+  #who-we-are .title::after {
+    content: "";
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    background-color: #C4C4C4;
+    width: 300px;
+    height: 700px;
+    top: 107%;
+    left: 2%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  #who-we-are .title h1 {
+    color: #fff;
+    background-color: #B3424A;
+    text-align: right;
+    width: 50%;
+    padding: 8px;
+    font-size: 1rem;
+  }
+  #who-we-are .content {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  #who-we-are .btn-div {
+    text-align: center;
+    width: 50%;
+    margin: 15px auto 0 auto;
+    display: block;
+    justify-content: space-around;
+  }
+  #who-we-are .btn {
+    border: solid 3px #B3424A;
+    background-color: transparent;
+    width: 200px;
+    height: 65px;
+    cursor: pointer;
+    color: #B3424A;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+    margin-top: 40px;
+  }
+  #who-we-are .btn:hover {
+    background-color: #B3424A;
+    color: #fff;
+  }
+
+  #past-cases {
+    height: 1050px;
+    width: 100%;
+  }
+  #past-cases .title {
+    margin: 20px 0;
+  }
+  #past-cases .title::after {
+    content: "";
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    background-color: #C4C4C4;
+    width: 300px;
+    height: 700px;
+    top: 107%;
+    left: 2%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 265%;
+  }
+  #past-cases .title h1 {
+    color: #fff;
+    background-color: #B3424A;
+    text-align: right;
+    width: 50%;
+    padding: 8px;
+    font-size: 1rem;
+  }
+  #past-cases .content {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    display: block;
+  }
+  #past-cases .border {
+    border: dashed 3px #B3424A;
+    margin: 20px 0;
+  }
+  #past-cases .ex-tbl {
+    border-collapse: collapse;
+  }
+  #past-cases .tbl-title {
+    text-align: right;
+  }
+  #past-cases .tbl-price {
+    padding-left: 15px;
+    vertical-align: bottom;
+  }
+  #past-cases .total .tbl-title, #past-cases .total .tbl-price {
+    border-top: solid 3px #B3424A;
+  }
+  #past-cases .content-right {
+    margin-top: 40px;
+  }
+  #past-cases .other-tbl {
+    margin-left: 5px;
+    width: 95%;
+  }
+  #past-cases .other-tbl tr td {
+    vertical-align: bottom;
+  }
+  #past-cases .notice {
+    color: #B3424A;
+    font-size: 1rem;
+  }
+  #past-cases .btn-div {
+    text-align: center;
+    margin-top: 30px;
+  }
+  #past-cases .btn {
+    border: solid 3px #B3424A;
+    background-color: transparent;
+    width: 200px;
+    height: 65px;
+    cursor: pointer;
+    color: #B3424A;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+  }
+  #past-cases .btn:hover {
+    background-color: #B3424A;
+    color: #fff;
+  }
+
+  #contact {
+    background-color: #333C5E;
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    background-image: url("../images/geometric_img.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60%;
+  }
+  #contact .title {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #contact .title h1 {
+    color: #fff;
+    background-color: #B3424A;
+    text-align: right;
+    width: 50%;
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  #contact .content {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    display: block;
+    gap: 0 40px;
+  }
+  #contact .contact-form {
+    display: block;
+  }
+  #contact .contact-form p {
+    color: #fff;
+  }
+  #contact .contact-form span {
+    color: #ff0000;
+  }
+  #contact label {
+    color: #fff;
+  }
+  #contact label:not(.not-required)::after {
+    content: "*";
+    color: #ff0000;
+    padding-left: 2px;
+  }
+  #contact input {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 1.25rem;
+    padding-bottom: 3px;
+    border-bottom: solid 3px #B3424A;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 90%;
+    margin: 5px 0 20px 0;
+  }
+  #contact #message {
+    display: block;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 5px;
+    font-family: "Roboto";
+    border: solid 3px #B3424A;
+    width: 95%;
+    height: 250px;
+    margin: 10px 0;
+    color: #fff;
+    outline: none;
+    resize: none;
+  }
+  #contact .form-message {
+    grid-column: 1/span 2;
+  }
+  #contact .btn-div {
+    width: 95%;
+    text-align: center;
+  }
+  #contact .btn {
+    border-bottom: solid 3px #B3424A;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.25rem;
+    transition: all 0.5s;
+    margin: 10px 0;
+  }
+  #contact .btn:hover {
+    transform: skewX(-15deg);
+  }
+  #contact iframe {
+    width: 300px;
+    height: 200px;
+  }
+  #contact .info {
+    color: #fff;
+    margin-top: 10px;
+  }
+
+  footer {
+    height: 200px;
+    width: 100%;
+  }
+  footer ul {
+    height: 50%;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  footer ul li {
+    text-align: center;
+  }
+  footer ul li a {
+    color: #333C5E;
+  }
+  footer p {
+    height: 50%;
+    text-align: center;
+    padding-top: 5px;
+    color: #333C5E;
   }
 }
 /* Tablet */

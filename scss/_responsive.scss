@@ -1,63 +1,541 @@
 // btn, hamburger menu
 
+@use "abstracts" as *;
+
 /* Smartphone */
 @media (max-width: 500px){
-    .drawer-hidden {
-        display: none;
-    }
-      
-    /* ハンバーガーアイコンの設置スペース */
-    .drawer-open {
-        display: flex;
-        height: 60px;
-        width: 60px;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 100;/* 重なり順を一番上に */
-        cursor: pointer;
-    }
-      
-    /* ハンバーガーメニューのアイコン */
-    .drawer-open span,
-    .drawer-open span:before,
-    .drawer-open span:after {
-        content: '';
-        display: block;
-        height: 3px;
-        width: 25px;
-        border-radius: 3px;
-        background: #333;
-        transition: 0.5s;
-        position: absolute;
-    }
-      
-    /* 三本線のうち一番上の棒の位置調整 */
-    .drawer-open span:before {
-        bottom: 8px;
-    }
-      
-    /* 三本線のうち一番下の棒の位置調整 */
-        .drawer-open span:after {
-        top: 8px;
-    }
-      
-    /* アイコンがクリックされたら真ん中の線を透明にする */
-    #drawer-check:checked ~ .drawer-open span {
-        background: rgba(255, 255, 255, 0);
-    }
-      
-    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-    #drawer-check:checked ~ .drawer-open span::before {
-        bottom: 0;
-        transform: rotate(45deg);
-    }
-      
-    #drawer-check:checked ~ .drawer-open span::after {
-        top: 0;
-        transform: rotate(-45deg);
+
+    * {
+        // border: solid 2px red;
+        overflow-x: hidden;
     }
 
+    #top {
+        background-color: map-get($colors, navy);
+        
+        // *
+        height: 400px;
+
+        width: 100%;
+    
+        .top-nav {
+            background-color: map-get($colors, navy);
+            position: fixed;
+            
+            // *
+            width: 100vw;
+            height: 40px;
+
+            // border: solid 2px red;
+
+            z-index: 1;
+        }
+
+        // *
+        .logo {
+            display: none;
+        }
+    
+        .logo a{
+            color: #fff;
+            font-size: 3rem;
+            @include robotoC;
+            float: left;
+    
+            margin: 0 20px;
+        }
+    
+        .span-d {
+            color: map-get($colors, grey);
+        }
+        
+        .drawer-hidden {
+            display: none;
+        }
+    
+        /* ハンバーガーアイコンの設置スペース */
+        .drawer-open {
+            display: flex;
+            height: 30px;
+            width: 30px;
+            right: 5%;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 100;/* 重なり順を一番上に */
+            cursor: pointer;
+        }
+          
+        /* ハンバーガーメニューのアイコン */
+        .drawer-open span,
+        .drawer-open span:before,
+        .drawer-open span:after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 25px;
+            border-radius: 3px;
+            background: map-get($colors, darkred);
+            transition: 0.5s;
+            position: absolute;
+        }
+          
+        /* 三本線のうち一番上の棒の位置調整 */
+        .drawer-open span:before {
+            bottom: 8px;
+        }
+          
+        /* 三本線のうち一番下の棒の位置調整 */
+        .drawer-open span:after {
+            top: 8px;
+        }
+          
+        /* アイコンがクリックされたら真ん中の線を透明にする */
+        #drawer-check:checked ~ .drawer-open span {
+            background: rgba(255, 255, 255, 0);
+        }
+          
+        /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+        #drawer-check:checked ~ .drawer-open span::before {
+            bottom: 0;
+            transform: rotate(45deg);
+        }
+          
+        #drawer-check:checked ~ .drawer-open span::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+    
+        .top-nav-ul {
+            width: 100%;
+            height: 50vh;
+            position: fixed;
+            top: 0;
+            left: 100%;/* メニューを画面の外に飛ばす */
+            z-index: 99;
+            color: #fff;
+            transition: .5s;
+            background-color: map-get($colors, navy);
+
+            // border: solid red 2px;
+        }
+    
+        #drawer-check:checked ~ .top-nav-ul {
+            left: 0;/* メニューを画面に入れる */
+        }
+    
+    
+        .top-nav-ul li {
+            // *
+            float: none;
+            
+            cursor: pointer;
+            margin: 13px 35px;
+            padding: 3px 0;
+            font-weight: bold;
+            
+            width: 170px;
+            height: 30px;
+            border-radius: 50px;
+            background-color: #fff;
+    
+            text-align: center;
+    
+            a {
+                color: map-get($colors, navy);
+            }
+        }
+    
+        #top-div {
+            // *
+            @include robotoC_sp;
+            @include bgImgStyle_sp;
+            height: 340px;
+            margin-top: 40px;
+
+            position: absolute;
+            width: 100%;
+    
+            // border: 2px solid red;
+    
+    
+            .container {        
+                color: #fff;    
+
+                // *
+                margin-left: 10px;
+                margin-top: 25px;
+            }
+    
+            h1 {
+                // *
+                font-size: 3rem;
+                margin-bottom: -40px;
+                width: 100%;
+                // border: 2px solid red;
+            }
+    
+            span {
+                // *
+                font-size: 6.25rem;
+                -webkit-text-stroke: 5px #fff;
+
+                color: transparent;
+                font-family: 'PT Sans', sans-serif;
+            }
+    
+            .span-d {
+                color: map-get($colors, grey);
+                -webkit-text-stroke: 0px;
+            }
+        }
+    
+        #to-top-btn {
+            height: 60px;
+            width: 60px;
+            border: solid 5px map-get($colors, darkred);
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            margin: 0 20px 20px 0;
+            transform: rotate(45deg);
+            cursor: pointer;
+            background-color: #fff;
+            z-index: 2;
+    
+            &:hover + #goldfish {
+                animation: in 1s forwards;
+            }
+    
+            a {
+                border-top: solid 4px map-get($colors, darkred);
+                border-left: solid 4px map-get($colors, darkred);
+                width: 20px;
+                height: 20px;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 55%;
+                left: 55%;
+                transform: translate(-50%, -50%);
+                display: block;
+            }
+        }
+    
+        #goldfish {
+            height: 50px;
+            width: auto;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            margin: 30px 30px;
+            animation: out 1s;
+            z-index: 1;
+        }
+    
+        @keyframes in {
+            0% {
+                margin: 30px 30px;
+            }
+    
+            100% {
+                margin: 0 60px 0 0;
+            }
+        }
+        
+        @keyframes out {
+            0% {
+                margin: 0 60px 0 0;
+            }
+    
+            100% {
+                margin: 30px 30px;
+            }
+        }
+    
+    }
+
+    
+
+
+
+    #who-we-are {
+        // * changed
+        height: 900px;
+
+        width: 100%;
+        // border: red 2px solid;
+    
+        .title {
+            margin: 20px 0;
+    
+            &::after {
+                // * changed
+                @include triangleBgStyle_sp;
+            }
+        }
+    
+        .title h1 {
+            // * changed
+            @include titleStyle_sp;
+        }
+    
+        .content {
+            // * changed
+            @include contentStyle_sp;
+        }
+    
+        .btn-div {
+            text-align: center;
+            width: 50%;
+
+            // *
+            margin: 15px auto 0 auto;
+            display: block;
+            justify-content: space-around;
+        }
+    
+        .btn {
+            @include btnStyle;
+            margin-top: 40px;
+        }
+    }
+    
+    
+    
+    
+    #past-cases {
+        // * changed
+        height: 1050px;
+
+        width: 100%;
+        // border: red 2px solid;
+    
+        .title {
+            margin: 20px 0;
+    
+            &::after {
+                // * changed
+                @include triangleBgStyle_sp;
+                top: 265%;
+            }
+        }
+    
+        .title h1 {
+            // * changed
+            @include titleStyle_sp;
+        }
+    
+        .content {
+            // * changed
+            @include contentStyle_sp;
+            display: block;
+            // grid-template-columns: repeat(2, 1fr);
+            // gap: 0 40px;
+        }
+    
+        .border {
+            border: dashed 3px map-get($colors, darkred);
+            margin: 20px 0;
+        }
+        
+        .ex-tbl{
+            border-collapse: collapse;
+        }
+    
+        .tbl-title {
+            text-align: right;
+        }
+    
+        .tbl-price {
+            // * changed
+            padding-left: 15px;
+            vertical-align: bottom;
+        }
+    
+        .total .tbl-title, .total .tbl-price {
+            border-top: solid 3px map-get($colors, darkred);
+        }
+
+        // * changed
+        .content-right {
+            margin-top: 40px;
+        }
+    
+        .other-tbl {
+            // * changed
+            margin-left: 5px;
+            width: 95%;
+        }
+
+        // * changed
+        .other-tbl tr td {
+            vertical-align: bottom;
+        }
+    
+        .notice {
+            color: map-get($colors, darkred);
+            font-size: 1rem;
+        }
+    
+        .btn-div {
+            // border: red solid 2px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    
+        .btn {
+            @include btnStyle;
+        }
+    }
+
+
+
+
+    #contact {
+        background-color: map-get($colors, navy);
+        width: 100%;
+
+        // * changed
+        height: 1200px;
+
+        position: relative;
+        @include bgImgStyle;
+    
+        .title {
+            // border: 2px solid red;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+        .title h1 {
+            // * changed
+            @include titleStyle_sp;
+
+            margin-top: 15px;
+        }
+    
+        .content {
+            // * changed
+            @include contentStyle_sp;
+            display: block;
+            // grid-template-columns: repeat(2, 1fr);
+            gap: 0 40px;
+        }    
+    
+        .contact-form {
+            // * changed
+            display: block;
+            // grid-template-columns: repeat(2, 1fr);
+    
+            p {
+                color: #fff;
+            }
+    
+            span {
+                color: #ff0000;
+            }
+        }
+    
+        label {
+            color: #fff;
+    
+            &:not(.not-required)::after {
+                content: '*';
+                color: #ff0000;
+                padding-left: 2px;
+            }
+        }
+    
+        input {
+            display: block;
+            background-color: transparent;
+            color: #fff;
+            outline: none;
+            font-size: 1.25rem;
+            padding-bottom: 3px;
+            border-bottom: solid 3px map-get($colors, darkred);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 90%;
+            margin: 5px 0 20px 0;
+        }
+    
+        #message {
+            display: block;
+            background-color: transparent;
+            font-size: 1.2rem;
+            padding: 5px;
+            font-family: "Roboto";
+            border: solid 3px map-get($colors, darkred);
+            width: 95%;
+            height: 250px;
+            margin: 10px 0;
+            color: #fff;
+            outline: none;
+            resize: none;
+        }
+        
+        .form-message {
+            grid-column: 1 / span 2;
+        }
+    
+        .btn-div {
+            width: 95%;
+            text-align: center
+        }
+    
+        .btn {
+            @include sendBtnStyle;
+            margin: 10px 0;
+        }
+
+        iframe {
+            // * changed
+            width: 300px;
+            height: 200px;
+        }
+    
+        .info {
+            color: #fff;
+            margin-top: 10px;
+        }
+    }
+
+
+
+
+    footer {
+        height: 200px;
+        width: 100%;
+    
+        ul {
+            height: 50%;
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        ul li {
+            text-align: center;
+        }
+    
+        ul li a {
+            color: map-get($colors, navy);
+        }
+    
+        p {
+            height: 50%;
+            text-align: center;
+            padding-top: 5px;
+            color: map-get($colors, navy);
+        }
+    
+    }
 
 }
 
