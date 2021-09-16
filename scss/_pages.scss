@@ -5,7 +5,7 @@
 #who-we-are {
     height: 600px;
     width: 100%;
-    border: red 2px solid;
+    // border: red 2px solid;
 
     .title {
         margin: 20px 0;
@@ -21,13 +21,31 @@
 
     .content {
         @include contentStyle;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .btn-div {
+        text-align: center;
+        margin: 30px auto 0 auto;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .btn {
+        @include btnStyle;
+        margin-top: 40px;
     }
 }
 
-#our-services {
+
+
+
+#past-cases {
     height: 600px;
     width: 100%;
-    border: red 2px solid;
+    // border: red 2px solid;
 
     .title {
         margin: 20px 0;
@@ -44,7 +62,51 @@
 
     .content {
         @include contentStyle;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 0 40px;
+    }
+
+    .border {
+        border: dashed 3px map-get($colors, darkred);
+        margin: 20px 0;
+    }
+    
+    .ex-tbl{
+        border-collapse: collapse;
+    }
+
+    .tbl-title {
+        text-align: right;
+    }
+
+    .tbl-price {
+        padding-left: 20px;
+    }
+
+    .total .tbl-title, .total .tbl-price {
+        border-top: solid 3px map-get($colors, darkred);
+    }
+
+    .other-tbl {
+        margin-left: 30px;
+        width: 450px;
+    }
+
+    .notice {
+        color: map-get($colors, darkred);
+        font-size: 1rem;
+    }
+
+    .btn-div {
+        // border: red solid 2px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .btn {
+        @include btnStyle;
     }
 }

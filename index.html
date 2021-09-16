@@ -21,7 +21,7 @@
     <header id="top">
         <nav class="top-nav">
             <div class="top-nav-div">
-                <h1 class="logo"><a href="/">UDI</a></h1>
+                <h1 class="logo"><a href="/">U<span class="span-d">D</span>I</a></h1>
                 <ul class="top-nav-ul">
                     <li><a class="current" href="#who-we-are">Who We Are</a></li>
                     <li><a href="#past-cases">Past Cases</a></li>
@@ -37,43 +37,90 @@
         <div id="top-div">
             <div class="container">
                 <h1><span>U</span>nnatural</h1>
-                <h1><span>D</span>eath</h1>
+                <h1><span class="span-d">D</span>eath</h1>
                 <h1><span>I</span>nvestigation</h1>
             </div>
         </div>
         <div id="to-top-btn"><a href="#top"></a></div>
+        <img id="goldfish" src="images/goldfish.png" alt="red-goldfish">
     </header>
 
     <section id="who-we-are">
         <div class="title">
             <h1>Who We Are</h1>
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus enim repellat perspiciatis, esse ad harum in nihil! Repudiandae distinctio eius eligendi est iusto iure, quod officia vel optio doloribus!</p>
+                <p>Unnatural Death Investigation Lab is a laboratory specialised in investigating the cause of death.</p>
+                <p>About 400 postmortem examinations are conducted yearly at this facility.</p>
+                <p>We accept autopsy requests from police organisations, local authorities and individuals.</p>
+                <br>
+                <p>Several test labs are on-site within the building which help prompt determination of the cause of death.</p>
+                <div class="btn-div">
+                    <button class="btn">Facility</button>
+                    <button class="btn">Our Services</button>
+                </div>                
             </div>
         </div>
     </section>
 
-    <section id="our-services">
+    <section id="past-cases">
         <div class="title">
-            <h1>Our Services</h1>
+            <h1>Past Cases</h1>
             <div class="content">
                 <div class="content-left">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus enim repellat perspiciatis, esse ad harum in nihil! Repudiandae distinctio eius eligendi est iusto iure, quod officia vel optio doloribus!</p>
-                    <ul>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                    </ul>
-                    <p>$ _________</p>
+                    <p>Example Case: W.T., male, 35 years old</p>
+                    <br>
+                    <p>He was found dead in his apartment room and the coronor declaired his death as Ischemic Heart Disease.</p>
+                    <p>However, his parents had doubt and brought the case to UDI.</p>
+                    <div class="border"></div>
+                    <table class="ex-tbl">
+                        <tr>
+                            <td class="tbl-title">General postmortem exmination fee:</td>
+                            <td class="tbl-price">$600</td>
+                        </tr>
+                        <tr>
+                          <td class="tbl-title">Examination fee based on each case:</td>
+                          <td class="tbl-price">$2,300</td>
+                        </tr>
+                        <tr class="total">
+                            <td class="tbl-title">Total:</td>
+                            <td class="tbl-price">$3,200</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="content-right">
-                    <p>Other cases</p>
-                    <ul>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                    </ul>
-                    <button class="btn">Estimate</button>
+                    <p>Price List for Other Cases:</p>
+                    <table class="other-tbl">
+                        <tr>
+                            <td>Skeletal remains</td>
+                            <td>$700</td>
+                        </tr>
+                        <tr>
+                            <td>Accidental death</td>
+                            <td>$1,150</td>
+                        </tr>
+                        <tr>
+                            <td>Immolation</td>
+                            <td>$1,250</td>
+                        </tr>
+                        <tr>
+                            <td>Poisoning</td>
+                            <td>$2,050</td>
+                        </tr>
+                        <tr>
+                            <td>Drowning</td>
+                            <td>$3,200</td>
+                        </tr>
+                        <tr>
+                            <td>Decompositioned body</td>
+                            <td>$3,200</td>
+                        </tr>
+                        <tr>
+                            <td class="notice">(Price excludes general fee)</td>
+                        </tr>
+                    </table>
+                    <div class="btn-div">
+                        <button class="btn">Estimate fee</button>
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -90,7 +137,7 @@
                             <input type="text" name="name" id="name" required>
                         </div>
                         <div class="form-right">
-                            <label for="company-name">Company Name</label>
+                            <label for="company-name" class="not-required">Company Name</label>
                             <input type="text" name="company-name" id="company-name">
                         </div>
                         <div class="form-email">
@@ -107,14 +154,16 @@
                         </div>
                         <p>(<span>*</span> required)</p>
                     </form>
-                    <button class="btn">Send</button>
+                    <div class="btn-div">
+                        <button class="btn">Send</button>
+                    </div>                    
                 </div>
                 <div class="content-right">
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51835.82269270928!2d139.52505941994733!3d35.708041877990695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018efaf3759b6e1%3A0x5581ab11f0c6bfd5!2z5pel5pys44CB5p2x5Lqs6YO95q2m6JS16YeO5biC!5e0!3m2!1sja!2sca!4v1631671462564!5m2!1sja!2sca" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                     <div class="info">
-                        <p>Address: Nishi-musashino, Musashino, Tokyo</p>
+                        <p>Address: Nishi-musashino, Tokyo</p>
                         <p>Phone: 201-801-1201</p>
                         <p>Email: inquiry@udilab.jp</p>
                     </div>
@@ -126,13 +175,15 @@
     <footer>
         <!-- <div class="footer-div"> -->
             <ul>
-                <li>Organisation Info</li>
-                <li>Career</li>
-                <li>Media Inquiry</li>
+                <li><a href="/">Organisation Info</a></li>
+                <li><a href="/">Career</a></li>
+                <li><a href="/">Media Inquiry</a></li>
             </ul>
             <div class="clr"></div>
             <p>Fan made website based on Japanese drama "Unnatural"🍋</p>
         <!-- </div> -->
     </footer>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

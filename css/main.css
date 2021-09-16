@@ -1,7 +1,14 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 60px;
+  /* 固定ヘッダの高さ分 */
 }
 
 ul {
@@ -10,6 +17,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 .clr {
@@ -21,6 +29,13 @@ a {
   height: 100vh;
   width: 100%;
 }
+#top .top-nav {
+  background-color: #333C5E;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+}
 #top .logo a {
   color: #fff;
   font-size: 3rem;
@@ -30,15 +45,20 @@ a {
   float: left;
   margin: 0 20px;
 }
+#top .span-d {
+  color: #C4C4C4;
+}
 #top .top-nav-ul {
   height: 60px;
-  border: 2px solid red;
 }
 #top .top-nav-ul li {
   cursor: pointer;
   float: left;
-  width: 150px;
-  height: 40px;
+  margin: 13px 35px;
+  padding: 3px 0;
+  font-weight: bold;
+  width: 170px;
+  height: 30px;
   border-radius: 50px;
   background-color: #fff;
   text-align: center;
@@ -55,7 +75,9 @@ a {
   background-position: right;
   background-size: 60%;
   height: calc(100vh - 60px);
-  border: 2px solid red;
+  position: absolute;
+  margin-top: 60px;
+  width: 100%;
 }
 #top #top-div .container {
   color: #fff;
@@ -72,6 +94,10 @@ a {
   font-family: "PT Sans", sans-serif;
   -webkit-text-stroke: 10px #fff;
 }
+#top #top-div .span-d {
+  color: #C4C4C4;
+  -webkit-text-stroke: 0px;
+}
 #top #to-top-btn {
   height: 60px;
   width: 60px;
@@ -83,6 +109,10 @@ a {
   transform: rotate(45deg);
   cursor: pointer;
   background-color: #fff;
+  z-index: 2;
+}
+#top #to-top-btn:hover + #goldfish {
+  animation: in 1s forwards;
 }
 #top #to-top-btn a {
   border-top: solid 4px #B3424A;
@@ -94,6 +124,33 @@ a {
   top: 55%;
   left: 55%;
   transform: translate(-50%, -50%);
+  display: block;
+}
+#top #goldfish {
+  height: 50px;
+  width: auto;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 30px 30px;
+  animation: out 1s;
+  z-index: 1;
+}
+@keyframes in {
+  0% {
+    margin: 30px 30px;
+  }
+  100% {
+    margin: 0 60px 0 0;
+  }
+}
+@keyframes out {
+  0% {
+    margin: 0 60px 0 0;
+  }
+  100% {
+    margin: 30px 30px;
+  }
 }
 
 #contact {
@@ -107,7 +164,6 @@ a {
   background-size: 60%;
 }
 #contact .title {
-  border: 2px solid red;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -129,6 +185,7 @@ a {
   margin: 30px auto 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 0 40px;
 }
 #contact .contact-form {
   display: grid;
@@ -143,7 +200,7 @@ a {
 #contact label {
   color: #fff;
 }
-#contact label::after {
+#contact label:not(.not-required)::after {
   content: "*";
   color: #ff0000;
   padding-left: 2px;
@@ -179,25 +236,33 @@ a {
 #contact .form-message {
   grid-column: 1/span 2;
 }
+#contact .btn-div {
+  width: 95%;
+  text-align: center;
+}
 #contact .btn {
   border-bottom: solid 3px #B3424A;
   border-top: none;
   border-left: none;
   border-right: none;
   background-color: transparent;
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 35px;
   cursor: pointer;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  transition: all 0.5s;
   margin: 10px 0;
+}
+#contact .btn:hover {
+  transform: skewX(-15deg);
 }
 #contact .info {
   color: #fff;
+  margin-top: 10px;
 }
 
 footer {
-  color: #333C5E;
   height: 70px;
 }
 footer ul {
@@ -208,18 +273,20 @@ footer ul {
 }
 footer ul li {
   text-align: center;
-  cursor: pointer;
+}
+footer ul li a {
+  color: #333C5E;
 }
 footer p {
   height: 50%;
   text-align: center;
   padding-top: 5px;
+  color: #333C5E;
 }
 
 #who-we-are {
   height: 600px;
   width: 100%;
-  border: red 2px solid;
 }
 #who-we-are .title {
   margin: 20px 0;
@@ -248,17 +315,40 @@ footer p {
 #who-we-are .content {
   width: 90%;
   margin: 30px auto 0 auto;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+#who-we-are .btn-div {
+  text-align: center;
+  margin: 30px auto 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+#who-we-are .btn {
+  border: solid 3px #B3424A;
+  background-color: transparent;
+  width: 200px;
+  height: 65px;
+  cursor: pointer;
+  color: #B3424A;
+  font-size: 1.5rem;
+  transition: all 0.5s;
+  margin-top: 40px;
+}
+#who-we-are .btn:hover {
+  background-color: #B3424A;
+  color: #fff;
 }
 
-#our-services {
+#past-cases {
   height: 600px;
   width: 100%;
-  border: red 2px solid;
 }
-#our-services .title {
+#past-cases .title {
   margin: 20px 0;
 }
-#our-services .title::after {
+#past-cases .title::after {
   content: "";
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
   clip-path: polygon(0 0, 0% 100%, 100% 0);
@@ -272,7 +362,7 @@ footer p {
   z-index: -1;
   top: 200%;
 }
-#our-services .title h1 {
+#past-cases .title h1 {
   color: #fff;
   background-color: #B3424A;
   text-align: right;
@@ -280,11 +370,56 @@ footer p {
   padding: 8px;
   font-size: 2rem;
 }
-#our-services .content {
+#past-cases .content {
   width: 90%;
   margin: 30px auto 0 auto;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 0 40px;
+}
+#past-cases .border {
+  border: dashed 3px #B3424A;
+  margin: 20px 0;
+}
+#past-cases .ex-tbl {
+  border-collapse: collapse;
+}
+#past-cases .tbl-title {
+  text-align: right;
+}
+#past-cases .tbl-price {
+  padding-left: 20px;
+}
+#past-cases .total .tbl-title, #past-cases .total .tbl-price {
+  border-top: solid 3px #B3424A;
+}
+#past-cases .other-tbl {
+  margin-left: 30px;
+  width: 450px;
+}
+#past-cases .notice {
+  color: #B3424A;
+  font-size: 1rem;
+}
+#past-cases .btn-div {
+  text-align: center;
+  margin-top: 30px;
+}
+#past-cases .btn {
+  border: solid 3px #B3424A;
+  background-color: transparent;
+  width: 200px;
+  height: 65px;
+  cursor: pointer;
+  color: #B3424A;
+  font-size: 1.5rem;
+  transition: all 0.5s;
+}
+#past-cases .btn:hover {
+  background-color: #B3424A;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

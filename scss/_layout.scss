@@ -6,6 +6,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 60px; /* 固定ヘッダの高さ分 */
 }
 
 ul {
@@ -14,6 +19,7 @@ ul {
 
 a {
     text-decoration: none;
+    display: block;
 }
 
 .clr {
@@ -28,10 +34,12 @@ a {
     height: 100vh;
     width: 100%;
 
-    .top-nav-div {
-        // padding: 0 20px;
-        // width: 98%;
-
+    .top-nav {
+        background-color: map-get($colors, navy);
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        z-index: 1;
     }
 
     .logo a{
@@ -43,18 +51,24 @@ a {
         margin: 0 20px;
     }
 
+    .span-d {
+        color: map-get($colors, grey);
+    }
+
     .top-nav-ul {
         height: 60px;
-        border: 2px solid red;
+        // border: 2px solid red;
     }
 
     .top-nav-ul li {
         cursor: pointer;
         float: left;
-
+        margin: 13px 35px;
+        padding: 3px 0;
+        font-weight: bold;
         
-        width: 150px;
-        height: 40px;
+        width: 170px;
+        height: 30px;
         border-radius: 50px;
         background-color: #fff;
 
@@ -82,8 +96,11 @@ a {
         @include bgImgStyle;
 
         height: calc(100vh - 60px);
+        position: absolute;
+        margin-top: 60px;
+        width: 100%;
 
-        border: 2px solid red;
+        // border: 2px solid red;
 
 
         .container {        
@@ -104,6 +121,11 @@ a {
             font-family: 'PT Sans', sans-serif;
             -webkit-text-stroke: 10px #fff;
         }
+
+        .span-d {
+            color: map-get($colors, grey);
+            -webkit-text-stroke: 0px;
+        }
     }
 
     #to-top-btn {
@@ -117,6 +139,11 @@ a {
         transform: rotate(45deg);
         cursor: pointer;
         background-color: #fff;
+        z-index: 2;
+
+        &:hover + #goldfish {
+            animation: in 1s forwards;
+        }
 
         a {
             border-top: solid 4px map-get($colors, darkred);
@@ -128,16 +155,46 @@ a {
             top: 55%;
             left: 55%;
             transform: translate(-50%, -50%);
+            display: block;
+        }
+    }
 
-            // &::after {
-            //     content: "To Top";
-            //     color: map-get($colors, darkred);
-            //     transform: none;
-            // }
+    #goldfish {
+        height: 50px;
+        width: auto;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 30px 30px;
+        animation: out 1s;
+        z-index: 1;
+    }
+
+    @keyframes in {
+        0% {
+            margin: 30px 30px;
+        }
+
+        100% {
+            margin: 0 60px 0 0;
         }
     }
     
+    @keyframes out {
+        0% {
+            margin: 0 60px 0 0;
+        }
+
+        100% {
+            margin: 30px 30px;
+        }
+    }
+
 }
+
+
+
+
 
 #contact {
     background-color: map-get($colors, navy);
@@ -147,8 +204,7 @@ a {
     @include bgImgStyle;
 
     .title {
-        border: 2px solid red;
-
+        // border: 2px solid red;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -166,6 +222,7 @@ a {
         @include contentStyle;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 0 40px;
     }    
 
     .contact-form {
@@ -184,7 +241,7 @@ a {
     label {
         color: #fff;
 
-        &::after {
+        &:not(.not-required)::after {
             content: '*';
             color: #ff0000;
             padding-left: 2px;
@@ -225,17 +282,27 @@ a {
         grid-column: 1 / span 2;
     }
 
+    .btn-div {
+        width: 95%;
+        text-align: center
+    }
+
     .btn {
-        @include btnStyle;
+        @include sendBtnStyle;
+        margin: 10px 0;
     }
 
     .info {
         color: #fff;
+        margin-top: 10px;
     }
 }
 
+
+
+
+
 footer {
-    color: map-get($colors, navy);
     height: 70px;
 
     ul {
@@ -247,13 +314,17 @@ footer {
     
     ul li {
         text-align: center;
-        cursor: pointer;
+    }
+
+    ul li a {
+        color: map-get($colors, navy);
     }
 
     p {
         height: 50%;
         text-align: center;
         padding-top: 5px;
+        color: map-get($colors, navy);
     }
 
 }
