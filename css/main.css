@@ -106,9 +106,8 @@ a {
   width: 60px;
   border: solid 5px #B3424A;
   position: fixed;
-  right: 0;
-  bottom: 0;
-  margin: 0 20px 20px 0;
+  right: 1%;
+  bottom: 2%;
   transform: rotate(45deg);
   cursor: pointer;
   background-color: #fff;
@@ -433,8 +432,9 @@ footer p {
 
 /* Smartphone */
 @media (max-width: 500px) {
-  * {
-    overflow-x: hidden;
+  html {
+    scroll-padding-top: 40px;
+    /* 固定ヘッダの高さ分 */
   }
 
   #top {
@@ -486,8 +486,8 @@ footer p {
     cursor: pointer;
   }
   #top .drawer-open span,
-#top .drawer-open span:before,
-#top .drawer-open span:after {
+#top .drawer-open span::before,
+#top .drawer-open span::after {
     content: "";
     display: block;
     height: 3px;
@@ -497,10 +497,10 @@ footer p {
     transition: 0.5s;
     position: absolute;
   }
-  #top .drawer-open span:before {
+  #top .drawer-open span::before {
     bottom: 8px;
   }
-  #top .drawer-open span:after {
+  #top .drawer-open span::after {
     top: 8px;
   }
   #top #drawer-check:checked ~ .drawer-open span {
@@ -583,9 +583,8 @@ footer p {
     width: 60px;
     border: solid 5px #B3424A;
     position: fixed;
-    right: 0;
-    bottom: 0;
-    margin: 0 20px 20px 0;
+    right: 5%;
+    bottom: 3%;
     transform: rotate(45deg);
     cursor: pointer;
     background-color: #fff;
@@ -890,11 +889,11 @@ footer p {
   }
 
   footer {
-    height: 200px;
+    height: 170px;
     width: 100%;
   }
   footer ul {
-    height: 50%;
+    height: 35%;
     padding-top: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -906,7 +905,8 @@ footer p {
     color: #333C5E;
   }
   footer p {
-    height: 50%;
+    height: 40%;
+    width: 65%;
     text-align: center;
     padding-top: 5px;
     color: #333C5E;

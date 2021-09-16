@@ -77,20 +77,8 @@ a {
         background-color: #fff;
 
         text-align: center;
-        // margin: 0 20px;
-
-        // &:hover a{
-        //     color: #fff;
-        //     background-color: map-get($colors, navy);
-        // }
 
         a {
-            // padding: 10px 50px;
-
-            // width: 100px;
-            // height: 50px;
-            // border-radius: 50px;
-            // background-color: #fff;
             color: map-get($colors, navy);
         }
     }
@@ -137,9 +125,9 @@ a {
         width: 60px;
         border: solid 5px map-get($colors, darkred);
         position: fixed;
-        right: 0;
-        bottom: 0;
-        margin: 0 20px 20px 0;
+        right: 1%;
+        bottom: 2%;
+        // margin: 0 20px 20px 0;
         transform: rotate(45deg);
         cursor: pointer;
         background-color: #fff;

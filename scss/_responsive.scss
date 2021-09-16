@@ -7,7 +7,13 @@
 
     * {
         // border: solid 2px red;
-        overflow-x: hidden;
+        // overflow-x: hidden;
+        // width: 100vw;
+    }
+
+    html {
+        // *
+        scroll-padding-top: 40px; /* 固定ヘッダの高さ分 */
     }
 
     #top {
@@ -68,8 +74,8 @@
           
         /* ハンバーガーメニューのアイコン */
         .drawer-open span,
-        .drawer-open span:before,
-        .drawer-open span:after {
+        .drawer-open span::before,
+        .drawer-open span::after {
             content: '';
             display: block;
             height: 3px;
@@ -81,12 +87,12 @@
         }
           
         /* 三本線のうち一番上の棒の位置調整 */
-        .drawer-open span:before {
+        .drawer-open span::before {
             bottom: 8px;
         }
           
         /* 三本線のうち一番下の棒の位置調整 */
-        .drawer-open span:after {
+        .drawer-open span::after {
             top: 8px;
         }
           
@@ -195,9 +201,12 @@
             width: 60px;
             border: solid 5px map-get($colors, darkred);
             position: fixed;
-            right: 0;
-            bottom: 0;
-            margin: 0 20px 20px 0;
+
+            // *
+            right: 5%;
+            bottom: 3%;
+            // margin: 0 20px 20px 0;
+
             transform: rotate(45deg);
             cursor: pointer;
             background-color: #fff;
@@ -510,11 +519,15 @@
 
 
     footer {
-        height: 200px;
+        // *
+        height: 170px;
+
         width: 100%;
     
         ul {
-            height: 50%;
+            // *
+            height: 35%;
+
             padding-top: 10px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -529,7 +542,10 @@
         }
     
         p {
-            height: 50%;
+            // *
+            height: 40%;
+            width: 65%;
+
             text-align: center;
             padding-top: 5px;
             color: map-get($colors, navy);
