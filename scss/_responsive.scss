@@ -1,0 +1,84 @@
+// btn, hamburger menu
+
+/* Smartphone */
+@media (max-width: 500px){
+    .drawer-hidden {
+        display: none;
+    }
+      
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer-open {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;/* 重なり順を一番上に */
+        cursor: pointer;
+    }
+      
+    /* ハンバーガーメニューのアイコン */
+    .drawer-open span,
+    .drawer-open span:before,
+    .drawer-open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #333;
+        transition: 0.5s;
+        position: absolute;
+    }
+      
+    /* 三本線のうち一番上の棒の位置調整 */
+    .drawer-open span:before {
+        bottom: 8px;
+    }
+      
+    /* 三本線のうち一番下の棒の位置調整 */
+        .drawer-open span:after {
+        top: 8px;
+    }
+      
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawer-check:checked ~ .drawer-open span {
+        background: rgba(255, 255, 255, 0);
+    }
+      
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawer-check:checked ~ .drawer-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+      
+    #drawer-check:checked ~ .drawer-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+
+}
+
+/* Tablet */
+@media (min-width: 501px) and (max-width: 768px){
+
+    
+}
+
+/* Normal */
+@media (min-width: 769px) and (max-width: 1200px){
+
+
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+
+}
+
+
+@media (min-width: 1441px){
+
+}
+
