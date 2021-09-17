@@ -7,7 +7,7 @@
 
     html {
         // *
-        scroll-padding-top: 0px; /* 固定ヘッダの高さ分 */
+        scroll-padding-top: 0px;
     }
 
     #top {
@@ -148,7 +148,7 @@
     
             &::after {
                 // * changed
-                @include triangleBgStyle_sp;
+                @include triangleBgStyle(700px, 70%);
             }
         }
     
@@ -159,7 +159,7 @@
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
         }
     
         .btn-div {
@@ -181,8 +181,7 @@
         .title {
             &::after {
                 // * changed
-                @include triangleBgStyle_sp;
-                top: 231%;
+                @include triangleBgStyle(700px, 231%);
             }
         }
     
@@ -193,7 +192,7 @@
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
@@ -238,7 +237,7 @@
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
@@ -293,7 +292,7 @@
 }
 
 @media (min-width: 321px) and (max-width: 500px) {
-    @include smp(780px, 1000px)
+    @include smp(780px, 1000px, 210%)
 }
 
 
@@ -302,7 +301,7 @@
 @media (min-width: 501px) and (max-width: 768px){
     html {
         // *
-        scroll-padding-top: 40px; /* 固定ヘッダの高さ分 */
+        scroll-padding-top: 40px;
     }
 
     #top {
@@ -442,7 +441,7 @@
     
             &::after {
                 // * changed
-                @include triangleBgStyle_tabl;
+                @include triangleBgStyle(500px, 95%);
             }
         }
     
@@ -453,7 +452,7 @@
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
         }
     
         .btn-div {
@@ -471,8 +470,7 @@
         .title {
             &::after {
                 // * changed
-                @include triangleBgStyle_tabl;
-                top: 195%;
+                @include triangleBgStyle(500px, 195%);
             }
         }
     
@@ -483,7 +481,7 @@
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
         }
 
         .tbl-price {
@@ -521,7 +519,7 @@
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
@@ -570,7 +568,87 @@
 
 /* Normal */
 @media (min-width: 769px) and (max-width: 1200px){
+    // header
+    #top {
 
+        .logo a{
+            // *
+            @include robotoC(0.25rem);
+        }
+
+        .top-nav-ul li {
+            // *
+            margin: 13px 15px;
+            width: 140px;
+        }
+
+        #top-div {
+            // *
+            @include bgImgStyle(70%);
+
+            h1 {
+                // *
+                font-size: 8rem;
+                margin-bottom: -55px;
+            }
+
+            span {
+                font-size: 13rem;
+            }
+        }
+
+    }
+
+
+
+
+    #who-we-are {
+        .title {
+            &::after {
+                // *
+                @include triangleBgStyle(500px, 107%);
+            }
+        }
+    }
+
+
+
+
+    #past-cases {
+        // *
+        height: 720px;
+
+        .title {
+            &::after {
+                // *
+                @include triangleBgStyle(500px, 188%);
+            }
+        }
+
+        .tbl-price {
+            // * changed
+            vertical-align: bottom;
+        }
+
+    }
+
+
+
+    #contact {
+        // *
+        height: 670px;
+    
+        .content {
+            // *
+            @include contentStyle(1.25rem, 1.75rem);
+        }
+        
+        iframe {
+            // *
+            width: 400px;
+        }
+    }
+    
 
 }
 

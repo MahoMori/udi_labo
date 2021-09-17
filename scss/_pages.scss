@@ -11,7 +11,7 @@
         margin: 20px 0;
 
         &::after {
-            @include triangleBgStyle;
+            @include triangleBgStyle();
         }
     }
 
@@ -49,8 +49,7 @@
         margin: 20px 0;
 
         &::after {
-            @include triangleBgStyle;
-            top: 200%;
+            @include triangleBgStyle(500px, 202%);
         }
     }
 

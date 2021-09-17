@@ -15,7 +15,7 @@ $colors: (
 @mixin bgImgStyle($bg-size: 60%) {
     background-image: url("../images/geometric_img.png");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: top right;
     background-size: $bg-size;
 }
 
@@ -30,61 +30,25 @@ $colors: (
     letter-spacing: $letter-space;
 }
 
-@mixin triangleBgStyle {
+@mixin triangleBgStyle($height: 500px, $top: 108%) {
     content: '';
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
     background-color: map-get($colors, grey);
     width: calc(100% - 5%);
-    height: 500px;
-    top: 108%;
+    height: $height;
+    top: $top;
     left: 2%;
     display: block;
     position: absolute;
     z-index: -1;
 }
 
-@mixin triangleBgStyle_sp {
-    content: '';
-    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
-    background-color: map-get($colors, grey);
-    width: calc(100% - 5%);
-    height: 700px;
-    top: 70%;
-    left: 2%;
-    display: block;
-    position: absolute;
-    z-index: -1;
-}
-
-@mixin triangleBgStyle_tabl {
-    content: '';
-    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
-    background-color: map-get($colors, grey);
-    width: calc(100% - 5%);
-    height: 500px;
-    top: 95%;
-    left: 2%;
-    display: block;
-    position: absolute;
-    z-index: -1;
-}
-
-@mixin contentStyle {
+@mixin contentStyle($font-size: 1.5rem, $line-height: 2.5rem) {
     width: 90%;
     margin: 30px auto 0 auto;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    font-family: sans-serif;
-}
-
-@mixin contentStyle_sp {
-    width: 90%;
-    margin: 30px auto 0 auto;
-    font-size: 1.25rem;
-    line-height: 2rem;
+    font-size: $font-size;
+    line-height: $line-height;
     font-family: sans-serif;
 }
 
@@ -127,10 +91,10 @@ $colors: (
 
 
 
-@mixin smp($wwa-height, $pc-height) {
+@mixin smp($wwa-height, $pc-height, $triangle-top) {
     html {
         // *
-        scroll-padding-top: 40px; /* 固定ヘッダの高さ分 */
+        scroll-padding-top: 40px;
     }
 
     #top {
@@ -271,7 +235,7 @@ $colors: (
     
             &::after {
                 // * changed
-                @include triangleBgStyle_sp;
+                @include triangleBgStyle(700px, 70%);
             }
         }
     
@@ -282,7 +246,7 @@ $colors: (
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
         }
     
         .btn-div {
@@ -304,8 +268,7 @@ $colors: (
         .title {
             &::after {
                 // * changed
-                @include triangleBgStyle_sp;
-                top: 231%;
+                @include triangleBgStyle(700px, $triangle-top);
             }
         }
     
@@ -316,7 +279,7 @@ $colors: (
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
@@ -361,7 +324,7 @@ $colors: (
     
         .content {
             // * changed
-            @include contentStyle_sp;
+            @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
