@@ -283,7 +283,7 @@ a {
 }
 #contact .info:nth-child(2) a {
   color: #fff;
-  border: red solid 2px;
+  text-decoration: none;
 }
 
 footer {
