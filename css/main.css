@@ -311,6 +311,7 @@ footer p {
 #who-we-are {
   height: 600px;
   width: 100%;
+  position: relative;
 }
 #who-we-are .title {
   margin: 20px 0;
@@ -322,7 +323,7 @@ footer p {
   background-color: #C4C4C4;
   width: 95%;
   height: 500px;
-  top: 108%;
+  top: 5%;
   left: 2%;
   display: block;
   position: absolute;
@@ -371,6 +372,7 @@ footer p {
 #past-cases {
   height: 600px;
   width: 100%;
+  position: relative;
 }
 #past-cases .title {
   margin: 20px 0;
@@ -382,7 +384,7 @@ footer p {
   background-color: #C4C4C4;
   width: 95%;
   height: 500px;
-  top: 202%;
+  top: 5%;
   left: 2%;
   display: block;
   position: absolute;
@@ -571,7 +573,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 700px;
-    top: 70%;
+    top: 2%;
     left: 2%;
     display: block;
     position: absolute;
@@ -611,7 +613,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 700px;
-    top: 231%;
+    top: 2%;
     left: 2%;
     display: block;
     position: absolute;
@@ -827,7 +829,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 700px;
-    top: 70%;
+    top: 2%;
     left: 2%;
     display: block;
     position: absolute;
@@ -867,7 +869,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 700px;
-    top: 210%;
+    top: 2%;
     left: 2%;
     display: block;
     position: absolute;
@@ -1081,7 +1083,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 500px;
-    top: 95%;
+    top: 5%;
     left: 2%;
     display: block;
     position: absolute;
@@ -1116,7 +1118,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 500px;
-    top: 195%;
+    top: 5%;
     left: 2%;
     display: block;
     position: absolute;
@@ -1235,7 +1237,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 500px;
-    top: 107%;
+    top: 5%;
     left: 2%;
     display: block;
     position: absolute;
@@ -1252,7 +1254,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 500px;
-    top: 188%;
+    top: 5%;
     left: 2%;
     display: block;
     position: absolute;
@@ -1301,7 +1303,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 500px;
-    top: 105%;
+    top: 5%;
     left: 2%;
     display: block;
     position: absolute;
@@ -1315,7 +1317,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 500px;
-    top: 165%;
+    top: 5%;
     left: 2%;
     display: block;
     position: absolute;
@@ -1384,7 +1386,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 500px;
-    top: 54%;
+    top: 5%;
     left: 2%;
     display: block;
     position: absolute;
@@ -1435,7 +1437,7 @@ footer p {
     background-color: #C4C4C4;
     width: 95%;
     height: 500px;
-    top: 89%;
+    top: 5%;
     left: 2%;
     display: block;
     position: absolute;

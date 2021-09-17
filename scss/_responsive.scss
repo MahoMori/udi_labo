@@ -133,7 +133,7 @@
     
         .title {
             &::after {
-                @include triangleBgStyle(700px, 70%);
+                @include triangleBgStyle(700px, 2%);
             }
         }
     
@@ -161,7 +161,7 @@
     
         .title {
             &::after {
-                @include triangleBgStyle(700px, 231%);
+                @include triangleBgStyle(700px, 2%);
             }
         }
     
@@ -255,7 +255,7 @@
 }
 
 @media (min-width: 321px) and (max-width: 500px) {
-    @include smp(780px, 1000px, 210%)
+    @include smp(780px, 1000px)
 }
 
 
@@ -391,7 +391,7 @@
     
         .title {
             &::after {
-                @include triangleBgStyle(500px, 95%);
+                @include triangleBgStyle();
             }
         }
     
@@ -416,7 +416,7 @@
     
         .title {
             &::after {
-                @include triangleBgStyle(500px, 195%);
+                @include triangleBgStyle();
             }
         }
     
@@ -532,7 +532,7 @@
     #who-we-are {
         .title {
             &::after {
-                @include triangleBgStyle(500px, 107%);
+                @include triangleBgStyle();
             }
         }
     }
@@ -545,7 +545,7 @@
 
         .title {
             &::after {
-                @include triangleBgStyle(500px, 188%);
+                @include triangleBgStyle();
             }
         }
 
@@ -603,7 +603,7 @@
     #who-we-are {
         .title {
             &::after {
-                @include triangleBgStyle(500px, 105%);
+                @include triangleBgStyle();
             }
         }
     }
@@ -614,7 +614,7 @@
 
         .title {
             &::after {
-                @include triangleBgStyle(500px, 165%);
+                @include triangleBgStyle();
             }
         }
 
@@ -686,7 +686,7 @@
             margin: 40px 0;
 
             &::after {
-                @include triangleBgStyle(500px, 54%);
+                @include triangleBgStyle();
             }
         }
 
@@ -713,7 +713,7 @@
             margin: 40px 0;
 
             &::after {
-                @include triangleBgStyle(500px, 89%);
+                @include triangleBgStyle();
             }
         }
 

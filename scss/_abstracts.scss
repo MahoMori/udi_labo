@@ -31,7 +31,7 @@ $colors: (
     letter-spacing: $letter-space;
 }
 
-@mixin triangleBgStyle($height: 500px, $top: 108%) {
+@mixin triangleBgStyle($height: 500px, $top: 5%) {
     content: '';
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
@@ -92,7 +92,7 @@ $colors: (
 
 
 
-@mixin smp($wwa-height, $pc-height, $triangle-top) {
+@mixin smp($wwa-height, $pc-height) {
     html {
         scroll-padding-top: 40px;
     }
@@ -224,7 +224,7 @@ $colors: (
         .title {
     
             &::after {
-                @include triangleBgStyle(700px, 70%);
+                @include triangleBgStyle(700px, 2%);
             }
         }
     
@@ -252,7 +252,7 @@ $colors: (
     
         .title {
             &::after {
-                @include triangleBgStyle(700px, $triangle-top);
+                @include triangleBgStyle(700px, 2%);
             }
         }
     
