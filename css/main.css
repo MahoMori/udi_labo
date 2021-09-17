@@ -284,6 +284,10 @@ a {
 #contact .tel {
   display: flex;
 }
+#contact .tel a {
+  color: #fff;
+  text-decoration: none;
+}
 
 footer {
   height: 70px;
