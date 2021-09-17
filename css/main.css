@@ -281,6 +281,9 @@ a {
   color: #fff;
   margin-top: 10px;
 }
+#contact .tel {
+  display: flex;
+}
 
 footer {
   height: 70px;
