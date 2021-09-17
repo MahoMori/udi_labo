@@ -304,11 +304,12 @@ a {
     .info {
         color: #fff;
         margin-top: 10px;
+        width: 100%;
 
-        // &:nth-child(2) a{
-        //     color: #fff;
-        //     text-decoration: none;
-        // }
+        &:nth-child(2) a{
+            color: #fff;
+            text-decoration: none;
+        }
     }
 }
 

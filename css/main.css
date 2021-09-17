@@ -280,6 +280,11 @@ a {
 #contact .info {
   color: #fff;
   margin-top: 10px;
+  width: 100%;
+}
+#contact .info:nth-child(2) a {
+  color: #fff;
+  text-decoration: none;
 }
 
 footer {
