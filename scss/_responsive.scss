@@ -5,23 +5,19 @@
 /* Smartphone */
 @media (max-width: 500px){
 
-    html {
-        // *
+    html {        
         scroll-padding-top: 0px;
     }
 
     #top {
-        // *
         height: 360px;
     
-        .top-nav {            
-            // *
+        .top-nav {
             background-color: transparent;
             width: 100vw;
             height: 40px;
         }
 
-        // *
         .logo {
             display: none;
         }
@@ -91,7 +87,6 @@
         }
     
         .top-nav-ul li {
-            // *
             float: none;
             margin: 13px auto;
         }
@@ -103,34 +98,29 @@
         }
     
         #top-div {
-            // *
             @include robotoC(0.25rem);
             @include bgImgStyle(125%);
             height: 360px;
             margin-top: 0;
     
             .container {
-                // *
                 margin-left: 10px;
                 margin-top: 25px;
             }
     
             h1 {
-                // *
                 font-size: 3rem;
                 margin-bottom: -35px;
                 width: 100%;
             }
     
             span {
-                // *
                 font-size: 6.25rem;
                 -webkit-text-stroke: 5px #fff;
             }
         }
     
         #to-top-btn {
-            // *
             right: 5%;
             bottom: 3%;
         }
@@ -141,29 +131,23 @@
 
 
     #who-we-are {
-        // * changed
         height: 900px;
     
         .title {
-    
             &::after {
-                // * changed
                 @include triangleBgStyle(700px, 70%);
             }
         }
     
         .title h1 {
-            // * changed
             @include titleStyle(55%, 1.25rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
         }
     
         .btn-div {
-            // *
             width: 100%;
             margin: 15px auto 0 auto;
             display: block;
@@ -175,45 +159,37 @@
     
     
     #past-cases {
-        // * changed
         height: 1100px;
     
         .title {
             &::after {
-                // * changed
                 @include triangleBgStyle(700px, 231%);
             }
         }
     
         .title h1 {
-            // * changed
             @include titleStyle(55%, 1.25rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
         .tbl-price {
-            // * changed
             padding-left: 15px;
             vertical-align: bottom;
         }
 
-        // * changed
         .content-right {
             margin-top: 40px;
         }
     
         .other-tbl {
-            // * changed
             margin-left: 5px;
             width: 95%;
         }
 
-        // * changed
         .other-tbl tr td {
             vertical-align: bottom;
         }
@@ -224,46 +200,38 @@
 
 
     #contact {
-        // * changed
         height: 1230px;
         @include bgImgStyle(125%);
         background-size: 150%;
         background-position: top;
         
         .title h1 {
-            // * changed
             @include titleStyle(55%, 1.25rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
-        // *
         .content-left {
             margin: 0 auto;
         }
     
         .contact-form {
-            // * changed
             display: block;
         }
 
         input {
-            // *
             width: 95%;
         }
     
-        // *
         .content-right {
             padding-top: 40px;
             width: 95%;
         }
 
         iframe {
-            // * changed
             width: 100%;
             height: 200px;
         }
@@ -273,16 +241,13 @@
 
 
     footer {
-        // *
         height: 170px;
 
         ul {
-            // *
             height: 35%;
         }
         
         p {
-            // *
             height: 40%;
             width: 65%;
             margin-top: 15px;
@@ -300,22 +265,18 @@
 /* Tablet */
 @media (min-width: 501px) and (max-width: 768px){
     html {
-        // *
         scroll-padding-top: 40px;
     }
 
     #top {
-        // *
         height: 500px;
     
-        .top-nav {            
-            // *
+        .top-nav {
             background-color: transparent;
             width: 100vw;
             height: 40px;
         }
 
-        // *
         .logo {
             display: none;
         }
@@ -385,7 +346,6 @@
         }
     
         .top-nav-ul li {
-            // *
             float: none;
             margin: 13px auto;
         }
@@ -397,33 +357,28 @@
         }
     
         #top-div {
-            // *
             @include bgImgStyle(70%);
             height: 500px;
             margin-top: 0;
     
             .container {
-                // *
                 margin-left: 20px;
                 margin-top: 25px;
             }
     
             h1 {
-                // *
                 font-size: 5rem;
                 margin-bottom: -60px;
                 width: 100%;
             }
     
             span {
-                // *
                 font-size: 9.25rem;
                 -webkit-text-stroke: 7px #fff;
             }
         }
     
         #to-top-btn {
-            // *
             right: 2%;
             bottom: 3%;
         }
@@ -434,29 +389,23 @@
 
 
     #who-we-are {
-        // * changed
         height: 550px;
     
         .title {
-    
             &::after {
-                // * changed
                 @include triangleBgStyle(500px, 95%);
             }
         }
     
         .title h1 {
-            // * changed
             @include titleStyle(40%, 1.5rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
         }
     
         .btn-div {
-            // *
             width: 100%;
             margin: 15px auto 0 auto;
         }
@@ -469,34 +418,28 @@
     
         .title {
             &::after {
-                // * changed
                 @include triangleBgStyle(500px, 195%);
             }
         }
     
         .title h1 {
-            // * changed
             @include titleStyle(40%, 1.5rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
         }
 
         .tbl-price {
-            // * changed
             padding-left: 15px;
             vertical-align: bottom;
         }
     
         .other-tbl {
-            // * changed
             margin-left: 5px;
             width: 95%;
         }
 
-        // * changed
         .other-tbl tr td {
             vertical-align: bottom;
         }
@@ -507,28 +450,23 @@
 
 
     #contact {
-        // * changed
         height: 1130px;
         @include bgImgStyle(70%);
         background-position: top right;
         
         .title h1 {
-            // * changed
             @include titleStyle(40%, 1.5rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
-        // *
         .content-left {
             margin: 0 auto;
         }
     
-        // *
         .content-right {
             padding-top: 40px;
             width: 95%;
@@ -536,7 +474,6 @@
         }
 
         iframe {
-            // * changed
             width: 600px;
             height: 300px;
         }
@@ -546,16 +483,13 @@
 
 
     footer {
-        // *
         height: 120px;
 
         ul {
-            // *
             height: 35%;
         }
         
         p {
-            // *
             height: 40%;
             width: 65%;
             margin-top: 15px;
@@ -572,22 +506,18 @@
     #top {
 
         .logo a{
-            // *
             @include robotoC(0.25rem);
         }
 
         .top-nav-ul li {
-            // *
             margin: 13px 15px;
             width: 140px;
         }
 
         #top-div {
-            // *
             @include bgImgStyle(70%);
 
             h1 {
-                // *
                 font-size: 8rem;
                 margin-bottom: -55px;
             }
@@ -605,7 +535,6 @@
     #who-we-are {
         .title {
             &::after {
-                // *
                 @include triangleBgStyle(500px, 107%);
             }
         }
@@ -615,18 +544,15 @@
 
 
     #past-cases {
-        // *
         height: 720px;
 
         .title {
             &::after {
-                // *
                 @include triangleBgStyle(500px, 188%);
             }
         }
 
         .tbl-price {
-            // * changed
             vertical-align: bottom;
         }
 
@@ -635,16 +561,13 @@
 
 
     #contact {
-        // *
         height: 670px;
     
         .content {
-            // *
             @include contentStyle(1.25rem, 1.75rem);
         }
         
         iframe {
-            // *
             width: 400px;
         }
     }
@@ -653,11 +576,204 @@
 }
 
 @media (min-width: 1201px) and (max-width: 1440px) {
+    #top {
 
+        .top-nav-ul li {
+            margin: 13px 45px;
+        }
+
+        #top-div {
+            @include bgImgStyle(70%);
+
+            h1 {
+                font-size: 11rem;
+                margin-bottom: -55px;
+            }
+
+            span {
+                font-size: 17rem;
+            }
+        }
+
+    }
+
+
+
+    #who-we-are {
+        .title {
+            &::after {
+                @include triangleBgStyle(500px, 105%);
+            }
+        }
+    }
+
+
+
+    #past-cases {
+
+        .title {
+            &::after {
+                @include triangleBgStyle(500px, 165%);
+            }
+        }
+
+    }
+
+
+
+    #contact {
+        height: 690px;
+    
+        .content {
+            @include contentStyle(1.25rem, 1.85rem);
+        }
+    }
+    
 }
 
 
 @media (min-width: 1441px){
 
+    html {
+        scroll-padding-top: 85px;
+    }
+
+    #top {
+        height: 50vh;
+
+        .logo a{
+            font-size: 5rem;
+        }
+
+        .top-nav {
+            height: 85px;
+        }
+
+        .top-nav-ul li {
+            margin: 13px 65px;
+            width: 320px;
+            height: 50px;
+            font-size: 2rem;
+        }
+
+        #top-div {
+            @include bgImgStyle(35%);
+
+            h1 {
+                font-size: 10rem;
+                margin-bottom: -55px;
+            }
+
+            span {
+                font-size: 16rem;
+            }
+        }
+    }
+
+
+
+
+    #who-we-are {
+        height: 620px;
+
+        .title {
+            margin: 40px 0;
+
+            &::after {
+                @include triangleBgStyle(500px, 54%);
+            }
+        }
+
+        .title h1 {
+            @include titleStyle(40%, 3rem, 0.2rem);
+        }
+
+        .content {
+            @include contentStyle(2.5rem, 3.5rem);
+        }
+
+        .btn {
+            @include btnStyle(1.75rem);
+        }
+    }
+
+
+
+
+    #past-cases {
+        height: 800px;
+
+        .title {
+            margin: 40px 0;
+
+            &::after {
+                @include triangleBgStyle(500px, 89%);
+            }
+        }
+
+        .title h1 {
+            @include titleStyle(40%, 3rem, 0.2rem);
+        }
+
+        .content {
+            @include contentStyle(2.5rem, 3.5rem);
+        }
+        
+        .ex-tbl{
+            width: 100%;
+        }
+
+        .tbl-price {
+            padding-left: 60px;
+        }
+
+        .other-tbl {
+            margin: 0 auto;
+            width: 700px;
+        }
+
+        .notice {
+            font-size: 1.75rem;
+        }
+
+        .btn {
+            @include btnStyle(1.85rem);
+            width: 230px;
+        }
+    }
+
+
+    #contact {
+        height: 50vh;
+        @include bgImgStyle(40%);
+
+        .title h1 {
+            @include titleStyle(40%, 3rem, 0.2rem);
+            margin-top: 40px;
+        }
+    
+        .content {
+            @include contentStyle(2.5rem, 3.5rem);
+    
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 40px;
+        }
+    
+        input {
+            margin: 30px 0 20px 0;
+        }
+    
+        .btn {
+            
+            @include sendBtnStyle(170px, 65px, 2.5rem);
+            margin: 50px 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+        }
+    }
 }
 

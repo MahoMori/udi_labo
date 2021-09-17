@@ -62,7 +62,6 @@ a {
 
     .top-nav-ul {
         height: 60px;
-        // border: 2px solid red;
     }
 
     .top-nav-ul li {
@@ -97,9 +96,6 @@ a {
         margin-top: 60px;
         width: 100%;
 
-        // border: 2px solid red;
-
-
         .container {        
             color: #fff;    
             margin-left: 50px;
@@ -109,7 +105,6 @@ a {
             font-size: 7rem;
             margin-bottom: -80px;
             width: 500px;
-            // border: 2px solid red;
         }
 
         span {
@@ -201,7 +196,6 @@ a {
     @include bgImgStyle();
 
     .title {
-        // border: 2px solid red;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -216,9 +210,7 @@ a {
     }
 
     .content {
-        @include contentStyle;
-        font-size: 1.25rem;
-        line-height: 1.5rem;
+        @include contentStyle(1.25rem, 1.5rem);
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);

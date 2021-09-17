@@ -52,14 +52,14 @@ $colors: (
     font-family: sans-serif;
 }
 
-@mixin btnStyle {
+@mixin btnStyle($font-size: 1.5rem) {
     border: solid 3px map-get($colors, darkred);
     background-color: transparent;
     width: 200px;
     height: 65px;
     cursor: pointer;
     color: map-get($colors, darkred);
-    font-size: 1.5rem;
+    font-size: $font-size;
     transition: all 0.5s;
 
     &:hover {
@@ -68,17 +68,17 @@ $colors: (
     }
 }
 
-@mixin sendBtnStyle {
+@mixin sendBtnStyle($width: 120px, $height: 35px, $font-size: 1.25rem) {
     border-bottom: solid 3px map-get($colors, darkred);
     border-top: none;
     border-left: none;
     border-right: none;
     background-color: transparent;
-    width: 120px;
-    height: 35px;
+    width: $width;
+    height: $height;
     cursor: pointer;
     color: #fff;
-    font-size: 1.25rem;
+    font-size: $font-size;
     transition: all 0.5s;
 
     &:hover {
