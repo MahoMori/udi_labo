@@ -5,30 +5,24 @@
 /* Smartphone */
 @media (max-width: 500px){
 
-    * {
-        // border: solid 2px red;
-        // overflow-x: hidden;
-        // width: 100vw;
-    }
-
     html {
         // *
-        scroll-padding-top: 40px; /* 固定ヘッダの高さ分 */
+        scroll-padding-top: 50px; /* 固定ヘッダの高さ分 */
     }
 
     #top {
         background-color: map-get($colors, navy);
         
         // *
-        height: 400px;
+        height: 360px;
 
         width: 100%;
     
         .top-nav {
-            background-color: map-get($colors, navy);
             position: fixed;
             
             // *
+            background-color: transparent;
             width: 100vw;
             height: 40px;
 
@@ -70,6 +64,7 @@
             position: absolute;
             z-index: 100;/* 重なり順を一番上に */
             cursor: pointer;
+            margin: 5px;
         }
           
         /* ハンバーガーメニューのアイコン */
@@ -134,9 +129,9 @@
         .top-nav-ul li {
             // *
             float: none;
+            margin: 13px auto;
             
             cursor: pointer;
-            margin: 13px 35px;
             padding: 3px 0;
             font-weight: bold;
             
@@ -151,13 +146,19 @@
                 color: map-get($colors, navy);
             }
         }
+        
+        #goldfish-nav {
+            display: block;
+            width: 50px;
+            margin: 0 auto;
+        }
     
         #top-div {
             // *
             @include robotoC_sp;
             @include bgImgStyle_sp;
-            height: 340px;
-            margin-top: 40px;
+            height: 360px;
+            margin-top: 0;
 
             position: absolute;
             width: 100%;
@@ -176,7 +177,7 @@
             h1 {
                 // *
                 font-size: 3rem;
-                margin-bottom: -40px;
+                margin-bottom: -35px;
                 width: 100%;
                 // border: 2px solid red;
             }
@@ -295,7 +296,7 @@
     
         .btn-div {
             text-align: center;
-            width: 50%;
+            width: 100%;
 
             // *
             margin: 15px auto 0 auto;
@@ -314,7 +315,7 @@
     
     #past-cases {
         // * changed
-        height: 1050px;
+        height: 1100px;
 
         width: 100%;
         // border: red 2px solid;
@@ -325,7 +326,7 @@
             &::after {
                 // * changed
                 @include triangleBgStyle_sp;
-                top: 265%;
+                top: 231%;
             }
         }
     
@@ -405,10 +406,14 @@
         width: 100%;
 
         // * changed
-        height: 1200px;
+        height: 1230px;
+        @include bgImgStyle_sp;
+        background-size: 150%;
+        background-position: top;
+
+        // border: solid 2px red;
 
         position: relative;
-        @include bgImgStyle;
     
         .title {
             // border: 2px solid red;
@@ -431,9 +436,16 @@
             // * changed
             @include contentStyle_sp;
             display: block;
+            // width: 100%;
+
             // grid-template-columns: repeat(2, 1fr);
             gap: 0 40px;
-        }    
+        }
+
+        // *
+        .content-left {
+            margin: 0 auto;
+        }
     
         .contact-form {
             // * changed
@@ -460,6 +472,9 @@
         }
     
         input {
+            // *
+            width: 95%;
+
             display: block;
             background-color: transparent;
             color: #fff;
@@ -470,7 +485,6 @@
             border-top: none;
             border-left: none;
             border-right: none;
-            width: 90%;
             margin: 5px 0 20px 0;
         }
     
@@ -503,9 +517,18 @@
             margin: 10px 0;
         }
 
+        // *
+        .content-right {
+            margin-top: 30px;
+            width: 95%;
+
+            // border: red solid 2px;
+            margin: 0 auto;
+        }
+
         iframe {
             // * changed
-            width: 300px;
+            width: 100%;
             height: 200px;
         }
     
@@ -545,9 +568,11 @@
             // *
             height: 40%;
             width: 65%;
+            margin-top: 15px;
+            margin-left: 10px;
+            // border: red 2px solid;
 
             text-align: center;
-            padding-top: 5px;
             color: map-get($colors, navy);
         }
     

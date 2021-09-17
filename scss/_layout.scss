@@ -83,6 +83,10 @@ a {
         }
     }
 
+    #goldfish-nav {
+        display: none;
+    }
+
     #top-div {
         @include robotoC;
         @include bgImgStyle;
@@ -212,6 +216,9 @@ a {
 
     .content {
         @include contentStyle;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0 40px;
@@ -260,7 +267,7 @@ a {
         background-color: transparent;
         font-size: 1.2rem;
         padding: 5px;
-        font-family: "Roboto";
+        font-family: 'Roboto', sans-serif;
         border: solid 3px map-get($colors, darkred);
         width: 95%;
         height: 250px;
@@ -284,6 +291,10 @@ a {
         margin: 10px 0;
     }
 
+    .map {
+        width: 100%;
+    }
+
     iframe {
         width: 500px;
         height: 400px;
@@ -292,6 +303,11 @@ a {
     .info {
         color: #fff;
         margin-top: 10px;
+
+        &:nth-child(2) a{
+            color: #fff;
+            text-decoration: none;
+        }
     }
 }
 
@@ -320,7 +336,7 @@ footer {
     p {
         height: 50%;
         text-align: center;
-        padding-top: 5px;
+        margin-top: 5px;
         color: map-get($colors, navy);
     }
 

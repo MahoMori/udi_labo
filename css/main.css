@@ -69,6 +69,9 @@ a {
 #top .top-nav-ul li a {
   color: #333C5E;
 }
+#top #goldfish-nav {
+  display: none;
+}
 #top #top-div {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
@@ -177,7 +180,7 @@ a {
   color: #fff;
   background-color: #B3424A;
   text-align: right;
-  width: 30%;
+  width: 35%;
   padding: 8px;
   font-size: 2rem;
   margin-top: 15px;
@@ -187,6 +190,8 @@ a {
   margin: 30px auto 0 auto;
   font-size: 1.5rem;
   line-height: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0 40px;
@@ -228,7 +233,7 @@ a {
   background-color: transparent;
   font-size: 1.2rem;
   padding: 5px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   border: solid 3px #B3424A;
   width: 95%;
   height: 250px;
@@ -261,6 +266,9 @@ a {
 #contact .btn:hover {
   transform: skewX(-15deg);
 }
+#contact .map {
+  width: 100%;
+}
 #contact iframe {
   width: 500px;
   height: 400px;
@@ -268,6 +276,10 @@ a {
 #contact .info {
   color: #fff;
   margin-top: 10px;
+}
+#contact .info:nth-child(2) a {
+  color: #fff;
+  text-decoration: none;
 }
 
 footer {
@@ -288,7 +300,7 @@ footer ul li a {
 footer p {
   height: 50%;
   text-align: center;
-  padding-top: 5px;
+  margin-top: 5px;
   color: #333C5E;
 }
 
@@ -304,7 +316,7 @@ footer p {
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
   clip-path: polygon(0 0, 0% 100%, 100% 0);
   background-color: #C4C4C4;
-  width: 1250px;
+  width: 95%;
   height: 500px;
   top: 108%;
   left: 2%;
@@ -316,7 +328,7 @@ footer p {
   color: #fff;
   background-color: #B3424A;
   text-align: right;
-  width: 30%;
+  width: 35%;
   padding: 8px;
   font-size: 2rem;
 }
@@ -361,7 +373,7 @@ footer p {
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
   clip-path: polygon(0 0, 0% 100%, 100% 0);
   background-color: #C4C4C4;
-  width: 1250px;
+  width: 95%;
   height: 500px;
   top: 108%;
   left: 2%;
@@ -374,7 +386,7 @@ footer p {
   color: #fff;
   background-color: #B3424A;
   text-align: right;
-  width: 30%;
+  width: 35%;
   padding: 8px;
   font-size: 2rem;
 }
@@ -433,13 +445,13 @@ footer p {
 /* Smartphone */
 @media (max-width: 500px) {
   html {
-    scroll-padding-top: 40px;
+    scroll-padding-top: 50px;
     /* 固定ヘッダの高さ分 */
   }
 
   #top {
     background-color: #333C5E;
-    height: 400px;
+    height: 360px;
     width: 100%;
     /* ハンバーガーアイコンの設置スペース */
     /* ハンバーガーメニューのアイコン */
@@ -449,8 +461,8 @@ footer p {
     /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
   }
   #top .top-nav {
-    background-color: #333C5E;
     position: fixed;
+    background-color: transparent;
     width: 100vw;
     height: 40px;
     z-index: 1;
@@ -484,6 +496,7 @@ footer p {
     z-index: 100;
     /* 重なり順を一番上に */
     cursor: pointer;
+    margin: 5px;
   }
   #top .drawer-open span,
 #top .drawer-open span::before,
@@ -532,8 +545,8 @@ footer p {
   }
   #top .top-nav-ul li {
     float: none;
+    margin: 13px auto;
     cursor: pointer;
-    margin: 13px 35px;
     padding: 3px 0;
     font-weight: bold;
     width: 170px;
@@ -545,6 +558,11 @@ footer p {
   #top .top-nav-ul li a {
     color: #333C5E;
   }
+  #top #goldfish-nav {
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+  }
   #top #top-div {
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 700;
@@ -552,9 +570,9 @@ footer p {
     background-image: url("../images/geometric_img.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 110%;
-    height: 340px;
-    margin-top: 40px;
+    background-size: 125%;
+    height: 360px;
+    margin-top: 0;
     position: absolute;
     width: 100%;
   }
@@ -565,7 +583,7 @@ footer p {
   }
   #top #top-div h1 {
     font-size: 3rem;
-    margin-bottom: -40px;
+    margin-bottom: -35px;
     width: 100%;
   }
   #top #top-div span {
@@ -644,9 +662,9 @@ footer p {
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
     background-color: #C4C4C4;
-    width: 300px;
+    width: 95%;
     height: 700px;
-    top: 107%;
+    top: 70%;
     left: 2%;
     display: block;
     position: absolute;
@@ -656,7 +674,7 @@ footer p {
     color: #fff;
     background-color: #B3424A;
     text-align: right;
-    width: 50%;
+    width: 55%;
     padding: 8px;
     font-size: 1rem;
   }
@@ -668,7 +686,7 @@ footer p {
   }
   #who-we-are .btn-div {
     text-align: center;
-    width: 50%;
+    width: 100%;
     margin: 15px auto 0 auto;
     display: block;
     justify-content: space-around;
@@ -690,7 +708,7 @@ footer p {
   }
 
   #past-cases {
-    height: 1050px;
+    height: 1100px;
     width: 100%;
   }
   #past-cases .title {
@@ -701,20 +719,20 @@ footer p {
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
     background-color: #C4C4C4;
-    width: 300px;
+    width: 95%;
     height: 700px;
-    top: 107%;
+    top: 70%;
     left: 2%;
     display: block;
     position: absolute;
     z-index: -1;
-    top: 265%;
+    top: 231%;
   }
   #past-cases .title h1 {
     color: #fff;
     background-color: #B3424A;
     text-align: right;
-    width: 50%;
+    width: 55%;
     padding: 8px;
     font-size: 1rem;
   }
@@ -778,12 +796,14 @@ footer p {
   #contact {
     background-color: #333C5E;
     width: 100%;
-    height: 1200px;
-    position: relative;
+    height: 1230px;
     background-image: url("../images/geometric_img.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 60%;
+    background-size: 125%;
+    background-size: 150%;
+    background-position: top;
+    position: relative;
   }
   #contact .title {
     width: 100%;
@@ -797,7 +817,7 @@ footer p {
     color: #fff;
     background-color: #B3424A;
     text-align: right;
-    width: 50%;
+    width: 55%;
     padding: 8px;
     font-size: 1rem;
     margin-top: 15px;
@@ -809,6 +829,9 @@ footer p {
     line-height: 2rem;
     display: block;
     gap: 0 40px;
+  }
+  #contact .content-left {
+    margin: 0 auto;
   }
   #contact .contact-form {
     display: block;
@@ -828,6 +851,7 @@ footer p {
     padding-left: 2px;
   }
   #contact input {
+    width: 95%;
     display: block;
     background-color: transparent;
     color: #fff;
@@ -838,7 +862,6 @@ footer p {
     border-top: none;
     border-left: none;
     border-right: none;
-    width: 90%;
     margin: 5px 0 20px 0;
   }
   #contact #message {
@@ -879,8 +902,13 @@ footer p {
   #contact .btn:hover {
     transform: skewX(-15deg);
   }
+  #contact .content-right {
+    margin-top: 30px;
+    width: 95%;
+    margin: 0 auto;
+  }
   #contact iframe {
-    width: 300px;
+    width: 100%;
     height: 200px;
   }
   #contact .info {
@@ -907,8 +935,9 @@ footer p {
   footer p {
     height: 40%;
     width: 65%;
+    margin-top: 15px;
+    margin-left: 10px;
     text-align: center;
-    padding-top: 5px;
     color: #333C5E;
   }
 }

@@ -29,14 +29,14 @@ $colors: (
     background-image: url("../images/geometric_img.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 110%;
+    background-size: 125%;
 }
 
 @mixin titleStyle {
     color: #fff;
     background-color: map-get($colors, darkred);
     text-align: right;
-    width: 30%;
+    width: 35%;
     padding: 8px;
     font-size: 2rem;
 }
@@ -45,7 +45,7 @@ $colors: (
     color: #fff;
     background-color: map-get($colors, darkred);
     text-align: right;
-    width: 50%;
+    width: 55%;
     padding: 8px;
     font-size: 1rem;
 }
@@ -55,7 +55,7 @@ $colors: (
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
     background-color: map-get($colors, grey);
-    width: 1250px;
+    width: calc(100% - 5%);
     height: 500px;
     top: 108%;
     left: 2%;
@@ -69,9 +69,9 @@ $colors: (
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
     background-color: map-get($colors, grey);
-    width: 300px;
+    width: calc(100% - 5%);
     height: 700px;
-    top: 107%;
+    top: 70%;
     left: 2%;
     display: block;
     position: absolute;
