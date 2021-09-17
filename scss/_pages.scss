@@ -16,7 +16,7 @@
     }
 
     .title h1 {
-        @include titleStyle;
+        @include titleStyle();
     }
 
     .content {
@@ -55,7 +55,7 @@
     }
 
     .title h1 {
-        @include titleStyle;
+        @include titleStyle();
     }
 
     .content {
