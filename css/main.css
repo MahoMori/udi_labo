@@ -185,6 +185,7 @@ a {
   padding: 8px;
   font-size: 2rem;
   font-family: sans-serif;
+  letter-spacing: 0.2rem;
   margin-top: 15px;
 }
 #contact .content {
@@ -283,6 +284,7 @@ a {
 #contact .info:nth-child(2) a {
   color: #fff;
   text-decoration: none;
+  border: red solid 2px;
 }
 
 footer {
@@ -336,6 +338,7 @@ footer p {
   padding: 8px;
   font-size: 2rem;
   font-family: sans-serif;
+  letter-spacing: 0.2rem;
 }
 #who-we-are .content {
   width: 90%;
@@ -396,6 +399,7 @@ footer p {
   padding: 8px;
   font-size: 2rem;
   font-family: sans-serif;
+  letter-spacing: 0.2rem;
 }
 #past-cases .content {
   width: 90%;
@@ -686,6 +690,7 @@ footer p {
     padding: 8px;
     font-size: 1.25rem;
     font-family: sans-serif;
+    letter-spacing: 0.15rem;
   }
   #who-we-are .content {
     width: 90%;
@@ -745,6 +750,7 @@ footer p {
     padding: 8px;
     font-size: 1.25rem;
     font-family: sans-serif;
+    letter-spacing: 0.15rem;
   }
   #past-cases .content {
     width: 90%;
@@ -831,6 +837,7 @@ footer p {
     padding: 8px;
     font-size: 1.25rem;
     font-family: sans-serif;
+    letter-spacing: 0.15rem;
     margin-top: 15px;
   }
   #contact .content {
