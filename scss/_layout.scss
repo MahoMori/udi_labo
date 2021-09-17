@@ -28,7 +28,7 @@ a {
 
 
 
-// header
+
 #top {
     background-color: map-get($colors, navy);
     height: 100vh;
@@ -127,7 +127,6 @@ a {
         position: fixed;
         right: 1%;
         bottom: 2%;
-        // margin: 0 20px 20px 0;
         transform: rotate(45deg);
         cursor: pointer;
         background-color: map-get($colors, white);
