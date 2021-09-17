@@ -3,7 +3,8 @@
 $colors: (
     navy: #333C5E,
     darkred: #B3424A,
-    grey: #C4C4C4
+    grey: #C4C4C4,
+    white: #fff
 );
 
 @mixin robotoC($letter-space: 0.45rem) {
@@ -20,7 +21,7 @@ $colors: (
 }
 
 @mixin titleStyle($width: 35%, $font-size: 2rem, $letter-space: 0.2rem) {
-    color: #fff;
+    color: map-get($colors, white);
     background-color: map-get($colors, darkred);
     text-align: right;
     width: $width;
@@ -64,7 +65,7 @@ $colors: (
 
     &:hover {
         background-color: map-get($colors, darkred);
-        color: #fff;
+        color: map-get($colors, white);
     }
 }
 
@@ -77,7 +78,7 @@ $colors: (
     width: $width;
     height: $height;
     cursor: pointer;
-    color: #fff;
+    color: map-get($colors, white);
     font-size: $font-size;
     transition: all 0.5s;
 
@@ -93,22 +94,18 @@ $colors: (
 
 @mixin smp($wwa-height, $pc-height, $triangle-top) {
     html {
-        // *
         scroll-padding-top: 40px;
     }
 
     #top {
-        // *
         height: 360px;
     
-        .top-nav {            
-            // *
+        .top-nav {
             background-color: transparent;
             width: 100vw;
             height: 40px;
         }
 
-        // *
         .logo {
             display: none;
         }
@@ -168,7 +165,7 @@ $colors: (
             top: 0;
             left: 100%;
             z-index: 99;
-            color: #fff;
+            color: map-get($colors, white);
             transition: .5s;
             background-color: map-get($colors, navy);
         }
@@ -178,7 +175,6 @@ $colors: (
         }
     
         .top-nav-ul li {
-            // *
             float: none;
             margin: 13px auto;
         }
@@ -190,34 +186,29 @@ $colors: (
         }
     
         #top-div {
-            // *
             @include robotoC(0.25rem);
             @include bgImgStyle(125%);
             height: 360px;
             margin-top: 0;
     
             .container {
-                // *
                 margin-left: 10px;
                 margin-top: 25px;
             }
     
             h1 {
-                // *
                 font-size: 3rem;
                 margin-bottom: -35px;
                 width: 100%;
             }
     
             span {
-                // *
                 font-size: 6.25rem;
-                -webkit-text-stroke: 5px #fff;
+                -webkit-text-stroke: 5px map-get($colors, white);
             }
         }
     
         #to-top-btn {
-            // *
             right: 5%;
             bottom: 3%;
         }
@@ -228,29 +219,24 @@ $colors: (
 
 
     #who-we-are {
-        // * changed
         height: $wwa-height;
     
         .title {
     
             &::after {
-                // * changed
                 @include triangleBgStyle(700px, 70%);
             }
         }
     
         .title h1 {
-            // * changed
             @include titleStyle(55%, 1.25rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
         }
     
         .btn-div {
-            // *
             width: 100%;
             margin: 15px auto 0 auto;
             display: block;
@@ -262,45 +248,37 @@ $colors: (
     
     
     #past-cases {
-        // * changed
         height: $pc-height;
     
         .title {
             &::after {
-                // * changed
                 @include triangleBgStyle(700px, $triangle-top);
             }
         }
     
         .title h1 {
-            // * changed
             @include titleStyle(55%, 1.25rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
         .tbl-price {
-            // * changed
             padding-left: 15px;
             vertical-align: bottom;
         }
 
-        // * changed
         .content-right {
             margin-top: 40px;
         }
     
         .other-tbl {
-            // * changed
             margin-left: 5px;
             width: 95%;
         }
 
-        // * changed
         .other-tbl tr td {
             vertical-align: bottom;
         }
@@ -311,46 +289,38 @@ $colors: (
 
 
     #contact {
-        // * changed
         height: 1230px;
         @include bgImgStyle(125%);
         background-size: 150%;
         background-position: top;
         
         .title h1 {
-            // * changed
             @include titleStyle(55%, 1.25rem, 0.15rem);
         }
     
         .content {
-            // * changed
             @include contentStyle(1.25rem, 2rem);
             display: block;
         }
 
-        // *
         .content-left {
             margin: 0 auto;
         }
     
         .contact-form {
-            // * changed
             display: block;
         }
 
         input {
-            // *
             width: 95%;
         }
     
-        // *
         .content-right {
             padding-top: 40px;
             width: 95%;
         }
 
         iframe {
-            // * changed
             width: 100%;
             height: 200px;
         }

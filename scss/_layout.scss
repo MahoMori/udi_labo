@@ -44,7 +44,7 @@ a {
     }
 
     .logo a{
-        color: #fff;
+        color: map-get($colors, white);
         font-size: 3rem;
         @include robotoC();
         float: left;
@@ -74,7 +74,7 @@ a {
         width: 170px;
         height: 30px;
         border-radius: 50px;
-        background-color: #fff;
+        background-color: map-get($colors, white);
 
         text-align: center;
 
@@ -97,7 +97,7 @@ a {
         width: 100%;
 
         .container {        
-            color: #fff;    
+            color: map-get($colors, white);    
             margin-left: 50px;
         }
 
@@ -111,7 +111,7 @@ a {
             font-size: 12rem;
             color: transparent;
             font-family: 'PT Sans', sans-serif;
-            -webkit-text-stroke: 10px #fff;
+            -webkit-text-stroke: 10px map-get($colors, white);
         }
 
         .span-d {
@@ -130,7 +130,7 @@ a {
         // margin: 0 20px 20px 0;
         transform: rotate(45deg);
         cursor: pointer;
-        background-color: #fff;
+        background-color: map-get($colors, white);
         z-index: 2;
 
         &:hover + #goldfish {
@@ -222,7 +222,7 @@ a {
         grid-template-columns: repeat(2, 1fr);
 
         p {
-            color: #fff;
+            color: map-get($colors, white);
         }
 
         span {
@@ -231,7 +231,7 @@ a {
     }
 
     label {
-        color: #fff;
+        color: map-get($colors, white);
 
         &:not(.not-required)::after {
             content: '*';
@@ -243,7 +243,7 @@ a {
     input {
         display: block;
         background-color: transparent;
-        color: #fff;
+        color: map-get($colors, white);
         outline: none;
         font-size: 1.25rem;
         padding-bottom: 3px;
@@ -265,7 +265,7 @@ a {
         width: 95%;
         height: 250px;
         margin: 10px 0;
-        color: #fff;
+        color: map-get($colors, white);
         outline: none;
         resize: none;
     }
@@ -294,7 +294,7 @@ a {
     }
 
     .info {
-        color: #fff;
+        color: map-get($colors, white);
         margin-top: 10px;
     }
 
@@ -302,7 +302,7 @@ a {
         display: flex;
         
         a {
-            color: #fff;
+            color: map-get($colors, white);
             text-decoration: none;
         }
     }
