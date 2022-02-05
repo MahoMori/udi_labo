@@ -1,785 +1,853 @@
 @use "abstracts" as *;
 
 /* Smartphone */
-@media (max-width: 500px){
+@media (max-width: 500px) {
+  html {
+    scroll-padding-top: 0px;
+  }
 
-    html {        
-        scroll-padding-top: 0px;
+  #top {
+    height: 360px;
+
+    .top-nav {
+      background-color: transparent;
+      width: 100vw;
+      height: 40px;
     }
 
-    #top {
-        height: 360px;
-    
-        .top-nav {
-            background-color: transparent;
-            width: 100vw;
-            height: 40px;
-        }
-
-        .logo {
-            display: none;
-        }
-    
-        .drawer-open {
-            display: flex;
-            height: 30px;
-            width: 30px;
-            right: 5%;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            z-index: 100;
-            cursor: pointer;
-            margin: 5px;
-        }
-        
-        .drawer-open span,
-        .drawer-open span::before,
-        .drawer-open span::after {
-            content: '';
-            display: block;
-            height: 3px;
-            width: 25px;
-            border-radius: 3px;
-            background: map-get($colors, darkred);
-            transition: 0.5s;
-            position: absolute;
-        }
-        
-        .drawer-open span::before {
-            bottom: 8px;
-        }
-        
-        .drawer-open span::after {
-            top: 8px;
-        }
-        
-        #drawer-check:checked ~ .drawer-open span {
-            background: rgba(255, 255, 255, 0);
-        }
-        
-        #drawer-check:checked ~ .drawer-open span::before {
-            bottom: 0;
-            transform: rotate(45deg);
-        }
-          
-        #drawer-check:checked ~ .drawer-open span::after {
-            top: 0;
-            transform: rotate(-45deg);
-        }
-    
-        .top-nav-ul {
-            width: 100%;
-            height: 50vh;
-            position: fixed;
-            top: 0;
-            left: 100%;
-            z-index: 99;
-            color: map-get($colors, white);
-            transition: .5s;
-            background-color: map-get($colors, navy);
-        }
-    
-        #drawer-check:checked ~ .top-nav-ul {
-            left: 0;
-        }
-    
-        .top-nav-ul li {
-            float: none;
-            margin: 13px auto;
-        }
-        
-        #goldfish-nav {
-            display: block;
-            width: 50px;
-            margin: 0 auto;
-        }
-    
-        #top-div {
-            @include robotoC(0.25rem);
-            @include bgImgStyle(125%);
-            height: 360px;
-            margin-top: 0;
-    
-            .container {
-                margin-left: 10px;
-                margin-top: 25px;
-            }
-    
-            h1 {
-                font-size: 3rem;
-                margin-bottom: -35px;
-                width: 100%;
-            }
-    
-            span {
-                font-size: 6.25rem;
-                -webkit-text-stroke: 5px map-get($colors, white);
-            }
-        }
-    
-        #to-top-btn {
-            right: 5%;
-            bottom: 3%;
-        }
+    .logo {
+      display: none;
     }
 
-    
-
-
-
-    #who-we-are {
-        height: 900px;
-    
-        .title {
-            &::after {
-                @include triangleBgStyle(700px, 2%);
-            }
-        }
-    
-        .title h1 {
-            @include titleStyle(55%, 1.25rem, 0.15rem);
-        }
-    
-        .content {
-            @include contentStyle(1.25rem, 2rem);
-        }
-    
-        .btn-div {
-            width: 100%;
-            margin: 15px auto 0 auto;
-            display: block;
-            justify-content: space-around;
-        }
-    }
-    
-    
-    
-    
-    #past-cases {
-        height: 1100px;
-    
-        .title {
-            &::after {
-                @include triangleBgStyle(700px, 2%);
-            }
-        }
-    
-        .title h1 {
-            @include titleStyle(55%, 1.25rem, 0.15rem);
-        }
-    
-        .content {
-            @include contentStyle(1.25rem, 2rem);
-            display: block;
-        }
-
-        .tbl-price {
-            padding-left: 15px;
-            vertical-align: bottom;
-        }
-
-        .content-right {
-            margin-top: 40px;
-        }
-    
-        .other-tbl {
-            margin-left: 5px;
-            width: 95%;
-        }
-
-        .other-tbl tr td {
-            vertical-align: bottom;
-        }
-    
+    .drawer-open {
+      display: flex;
+      height: 30px;
+      width: 30px;
+      right: 5%;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 100;
+      cursor: pointer;
+      margin: 5px;
     }
 
-
-
-
-    #contact {
-        height: 1230px;
-        @include bgImgStyle(125%);
-        background-size: 150%;
-        background-position: top;
-        
-        .title h1 {
-            @include titleStyle(55%, 1.25rem, 0.15rem);
-        }
-    
-        .content {
-            @include contentStyle(1.25rem, 2rem);
-            display: block;
-        }
-
-        .content-left {
-            margin: 0 auto;
-        }
-    
-        .contact-form {
-            display: block;
-        }
-
-        input {
-            width: 95%;
-        }
-    
-        .content-right {
-            padding-top: 40px;
-            width: 95%;
-        }
-
-        iframe {
-            width: 100%;
-            height: 200px;
-        }
+    .drawer-open span,
+    .drawer-open span::before,
+    .drawer-open span::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 25px;
+      border-radius: 3px;
+      background: map-get($colors, darkred);
+      transition: 0.5s;
+      position: absolute;
     }
 
-
-
-
-    footer {
-        height: 170px;
-
-        ul {
-            height: 35%;
-        }
-        
-        p {
-            height: 40%;
-            width: 65%;
-            margin-top: 15px;
-            margin-left: 10px;
-        }
+    .drawer-open span::before {
+      bottom: 8px;
     }
+
+    .drawer-open span::after {
+      top: 8px;
+    }
+
+    #drawer-check:checked ~ .drawer-open span {
+      background: rgba(255, 255, 255, 0);
+    }
+
+    #drawer-check:checked ~ .drawer-open span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+
+    #drawer-check:checked ~ .drawer-open span::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    .top-nav-ul {
+      width: 100%;
+      height: 50vh;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      z-index: 99;
+      color: map-get($colors, white);
+      transition: 0.5s;
+      background-color: map-get($colors, navy);
+    }
+
+    #drawer-check:checked ~ .top-nav-ul {
+      left: 0;
+    }
+
+    .top-nav-ul li {
+      float: none;
+      margin: 13px auto;
+    }
+
+    #goldfish-nav {
+      display: block;
+      width: 50px;
+      margin: 0 auto;
+    }
+
+    #top-div {
+      @include robotoC(0.25rem);
+      @include bgImgStyle(125%);
+      height: 360px;
+      margin-top: 0;
+
+      .container {
+        margin-left: 10px;
+        margin-top: 25px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: -35px;
+        width: 100%;
+      }
+
+      span {
+        font-size: 6.25rem;
+        -webkit-text-stroke: 5px map-get($colors, white);
+      }
+    }
+
+    #to-top-btn {
+      right: 5%;
+      bottom: 3%;
+    }
+  }
+
+  #who-we-are {
+    height: 900px;
+
+    .title {
+      &::after {
+        @include triangleBgStyle(700px, 2%);
+      }
+    }
+
+    .title h1 {
+      @include titleStyle(55%, 1.25rem, 0.15rem);
+    }
+
+    .content {
+      @include contentStyle(1.25rem, 2rem);
+    }
+
+    .btn-div {
+      width: 100%;
+      margin: 15px auto 0 auto;
+      display: block;
+      justify-content: space-around;
+    }
+  }
+
+  #past-cases {
+    height: 1100px;
+
+    .title {
+      &::after {
+        @include triangleBgStyle(700px, 2%);
+      }
+    }
+
+    .title h1 {
+      @include titleStyle(55%, 1.25rem, 0.15rem);
+    }
+
+    .content {
+      @include contentStyle(1.25rem, 2rem);
+      display: block;
+    }
+
+    .tbl-price {
+      padding-left: 15px;
+      vertical-align: bottom;
+    }
+
+    .content-right {
+      margin-top: 40px;
+    }
+
+    .other-tbl {
+      margin-left: 5px;
+      width: 95%;
+    }
+
+    .other-tbl tr td {
+      vertical-align: bottom;
+    }
+  }
+
+  #contact {
+    height: 1230px;
+    @include bgImgStyle(125%);
+    background-size: 150%;
+    background-position: top;
+
+    .title h1 {
+      @include titleStyle(55%, 1.25rem, 0.15rem);
+    }
+
+    .content {
+      @include contentStyle(1.25rem, 2rem);
+      display: block;
+    }
+
+    .content-left {
+      margin: 0 auto;
+    }
+
+    .contact-form {
+      display: block;
+    }
+
+    input {
+      width: 95%;
+    }
+
+    .content-right {
+      padding-top: 40px;
+      width: 95%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  footer {
+    height: 170px;
+
+    ul {
+      height: 35%;
+    }
+
+    p {
+      height: 40%;
+      width: 65%;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+  }
 }
 
 @media (min-width: 321px) and (max-width: 500px) {
-    @include smp(780px, 1000px)
+  @include smp(780px, 1000px);
 }
-
-
 
 /* Tablet */
-@media (min-width: 501px) and (max-width: 768px){
-    html {
-        scroll-padding-top: 40px;
+@media (min-width: 501px) and (max-width: 768px) {
+  html {
+    scroll-padding-top: 40px;
+  }
+
+  #top {
+    height: 500px;
+
+    .top-nav {
+      background-color: transparent;
+      width: 100vw;
+      height: 40px;
     }
 
-    #top {
-        height: 500px;
-    
-        .top-nav {
-            background-color: transparent;
-            width: 100vw;
-            height: 40px;
-        }
-
-        .logo {
-            display: none;
-        }
-    
-        .drawer-open {
-            display: flex;
-            height: 30px;
-            width: 30px;
-            right: 5%;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            z-index: 100;
-            cursor: pointer;
-            margin: 5px;
-        }
-        
-        .drawer-open span,
-        .drawer-open span::before,
-        .drawer-open span::after {
-            content: '';
-            display: block;
-            height: 3px;
-            width: 25px;
-            border-radius: 3px;
-            background: map-get($colors, darkred);
-            transition: 0.5s;
-            position: absolute;
-        }
-        
-        .drawer-open span::before {
-            bottom: 8px;
-        }
-        
-        .drawer-open span::after {
-            top: 8px;
-        }
-        
-        #drawer-check:checked ~ .drawer-open span {
-            background: rgba(255, 255, 255, 0);
-        }
-        
-        #drawer-check:checked ~ .drawer-open span::before {
-            bottom: 0;
-            transform: rotate(45deg);
-        }
-          
-        #drawer-check:checked ~ .drawer-open span::after {
-            top: 0;
-            transform: rotate(-45deg);
-        }
-    
-        .top-nav-ul {
-            width: 100%;
-            height: 50vh;
-            position: fixed;
-            top: 0;
-            left: 100%;
-            z-index: 99;
-            color: map-get($colors, white);
-            transition: .5s;
-            background-color: map-get($colors, navy);
-        }
-    
-        #drawer-check:checked ~ .top-nav-ul {
-            left: 0;
-        }
-    
-        .top-nav-ul li {
-            float: none;
-            margin: 13px auto;
-        }
-        
-        #goldfish-nav {
-            display: block;
-            width: 50px;
-            margin: 0 auto;
-        }
-    
-        #top-div {
-            @include bgImgStyle(70%);
-            height: 500px;
-            margin-top: 0;
-    
-            .container {
-                margin-left: 20px;
-                margin-top: 25px;
-            }
-    
-            h1 {
-                font-size: 5rem;
-                margin-bottom: -60px;
-                width: 100%;
-            }
-    
-            span {
-                font-size: 9.25rem;
-                -webkit-text-stroke: 7px map-get($colors, white);
-            }
-        }
-    
-        #to-top-btn {
-            right: 2%;
-            bottom: 3%;
-        }
+    .logo {
+      display: none;
     }
 
-    
-
-
-
-    #who-we-are {
-        height: 550px;
-    
-        .title {
-            &::after {
-                @include triangleBgStyle();
-            }
-        }
-    
-        .title h1 {
-            @include titleStyle(40%, 1.5rem, 0.15rem);
-        }
-    
-        .content {
-            @include contentStyle(1.25rem, 2rem);
-        }
-    
-        .btn-div {
-            width: 100%;
-            margin: 15px auto 0 auto;
-        }
-    }
-    
-    
-    
-    
-    #past-cases {
-    
-        .title {
-            &::after {
-                @include triangleBgStyle();
-            }
-        }
-    
-        .title h1 {
-            @include titleStyle(40%, 1.5rem, 0.15rem);
-        }
-    
-        .content {
-            @include contentStyle(1.25rem, 2rem);
-        }
-
-        .tbl-price {
-            padding-left: 15px;
-            vertical-align: bottom;
-        }
-    
-        .other-tbl {
-            margin-left: 5px;
-            width: 95%;
-        }
-
-        .other-tbl tr td {
-            vertical-align: bottom;
-        }
-    
+    .drawer-open {
+      display: flex;
+      height: 30px;
+      width: 30px;
+      right: 5%;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 100;
+      cursor: pointer;
+      margin: 5px;
     }
 
-
-
-
-    #contact {
-        height: 1130px;
-        @include bgImgStyle(70%);
-        background-position: top right;
-        
-        .title h1 {
-            @include titleStyle(40%, 1.5rem, 0.15rem);
-        }
-    
-        .content {
-            @include contentStyle(1.25rem, 2rem);
-            display: block;
-        }
-
-        .content-left {
-            margin: 0 auto;
-        }
-    
-        .content-right {
-            padding-top: 40px;
-            width: 95%;
-            margin: 0 auto;
-        }
-
-        iframe {
-            width: 600px;
-            height: 300px;
-        }
+    .drawer-open span,
+    .drawer-open span::before,
+    .drawer-open span::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 25px;
+      border-radius: 3px;
+      background: map-get($colors, darkred);
+      transition: 0.5s;
+      position: absolute;
     }
 
+    .drawer-open span::before {
+      bottom: 8px;
+    }
 
+    .drawer-open span::after {
+      top: 8px;
+    }
 
+    #drawer-check:checked ~ .drawer-open span {
+      background: rgba(255, 255, 255, 0);
+    }
 
-    footer {
-        height: 120px;
+    #drawer-check:checked ~ .drawer-open span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+    }
 
-        ul {
-            height: 35%;
-        }
-        
-        p {
-            height: 40%;
-            width: 65%;
-            margin-top: 15px;
-            margin-left: 10px;
-        }
-    }    
+    #drawer-check:checked ~ .drawer-open span::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    .top-nav-ul {
+      width: 100%;
+      height: 50vh;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      z-index: 99;
+      color: map-get($colors, white);
+      transition: 0.5s;
+      background-color: map-get($colors, navy);
+    }
+
+    #drawer-check:checked ~ .top-nav-ul {
+      left: 0;
+    }
+
+    .top-nav-ul li {
+      float: none;
+      margin: 13px auto;
+    }
+
+    #goldfish-nav {
+      display: block;
+      width: 50px;
+      margin: 0 auto;
+    }
+
+    #top-div {
+      @include bgImgStyle(70%);
+      height: 500px;
+      margin-top: 0;
+
+      .container {
+        margin-left: 20px;
+        margin-top: 25px;
+      }
+
+      h1 {
+        font-size: 5rem;
+        margin-bottom: -60px;
+        width: 100%;
+      }
+
+      span {
+        font-size: 9.25rem;
+        -webkit-text-stroke: 7px map-get($colors, white);
+      }
+    }
+
+    #to-top-btn {
+      right: 2%;
+      bottom: 3%;
+    }
+  }
+
+  #who-we-are {
+    height: 550px;
+
+    .title {
+      &::after {
+        @include triangleBgStyle();
+      }
+    }
+
+    .title h1 {
+      @include titleStyle(40%, 1.5rem, 0.15rem);
+    }
+
+    .content {
+      @include contentStyle(1.25rem, 2rem);
+    }
+
+    .btn-div {
+      width: 100%;
+      margin: 15px auto 0 auto;
+    }
+  }
+
+  #past-cases {
+    .title {
+      &::after {
+        @include triangleBgStyle();
+      }
+    }
+
+    .title h1 {
+      @include titleStyle(40%, 1.5rem, 0.15rem);
+    }
+
+    .content {
+      @include contentStyle(1.25rem, 2rem);
+    }
+
+    .tbl-price {
+      padding-left: 15px;
+      vertical-align: bottom;
+    }
+
+    .other-tbl {
+      margin-left: 5px;
+      width: 95%;
+    }
+
+    .other-tbl tr td {
+      vertical-align: bottom;
+    }
+  }
+
+  #contact {
+    height: 1130px;
+    @include bgImgStyle(70%);
+    background-position: top right;
+
+    .title h1 {
+      @include titleStyle(40%, 1.5rem, 0.15rem);
+    }
+
+    .content {
+      @include contentStyle(1.25rem, 2rem);
+      display: block;
+    }
+
+    .content-left {
+      margin: 0 auto;
+    }
+
+    .content-right {
+      padding-top: 40px;
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    iframe {
+      width: 600px;
+      height: 300px;
+    }
+  }
+
+  footer {
+    height: 120px;
+
+    ul {
+      height: 35%;
+    }
+
+    p {
+      height: 40%;
+      width: 65%;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+  }
 }
-
-
 
 /* Normal */
-@media (min-width: 769px) and (max-width: 1024px){
-    #top {
-
-        .logo a{
-            @include robotoC(0.25rem);
-        }
-
-        .top-nav-ul li {
-            margin: 13px 15px;
-            width: 140px;
-        }
-
-        #top-div {
-            @include bgImgStyle(70%);
-
-            h1 {
-                font-size: 8rem;
-                margin-bottom: -55px;
-            }
-
-            span {
-                font-size: 13rem;
-            }
-        }
-
+@media (min-width: 769px) and (max-width: 1024px) {
+  #top {
+    .logo a {
+      @include robotoC(0.25rem);
     }
 
-
-
-
-    #who-we-are {
-        .title {
-            &::after {
-                @include triangleBgStyle();
-            }
-        }
+    .top-nav-ul li {
+      margin: 13px 15px;
+      width: 140px;
     }
 
+    #top-div {
+      @include bgImgStyle(70%);
 
+      h1 {
+        font-size: 8rem;
+        margin-bottom: -55px;
+      }
 
+      span {
+        font-size: 13rem;
+      }
+    }
+  }
 
-    #past-cases {
-        height: 720px;
+  #who-we-are {
+    .title {
+      &::after {
+        @include triangleBgStyle();
+      }
+    }
+  }
 
-        .title {
-            &::after {
-                @include triangleBgStyle();
-            }
-        }
+  #past-cases {
+    height: 720px;
 
-        .tbl-price {
-            vertical-align: bottom;
-        }
-
+    .title {
+      &::after {
+        @include triangleBgStyle();
+      }
     }
 
-
-
-    #contact {
-        height: 670px;
-    
-        .content {
-            @include contentStyle(1.25rem, 1.75rem);
-        }
-        
-        iframe {
-            width: 400px;
-        }
+    .tbl-price {
+      vertical-align: bottom;
     }
-    
+  }
 
+  #contact {
+    height: 670px;
+
+    .content {
+      @include contentStyle(1.25rem, 1.75rem);
+    }
+
+    iframe {
+      width: 400px;
+    }
+  }
 }
-
-
-
-
 
 @media (width: 1440px) {
-    #top {
-
-        .top-nav-ul li {
-            margin: 13px 45px;
-        }
-
-        #top-div {
-            @include bgImgStyle(70%);
-
-            h1 {
-                font-size: 11rem;
-                margin-bottom: -55px;
-            }
-
-            span {
-                font-size: 17rem;
-            }
-        }
-
+  #top {
+    .top-nav-ul li {
+      margin: 13px 45px;
     }
 
+    #top-div {
+      @include bgImgStyle(70%);
 
+      h1 {
+        font-size: 11rem;
+        margin-bottom: -55px;
+      }
 
-    #who-we-are {
-        .title {
-            &::after {
-                @include triangleBgStyle();
-            }
-        }
+      span {
+        font-size: 17rem;
+      }
     }
+  }
 
-
-
-    #past-cases {
-
-        .title {
-            &::after {
-                @include triangleBgStyle();
-            }
-        }
-
+  #who-we-are {
+    .title {
+      &::after {
+        @include triangleBgStyle();
+      }
     }
+  }
 
-
-
-    #contact {
-        height: 690px;
-    
-        .content {
-            @include contentStyle(1.25rem, 1.85rem);
-        }
+  #past-cases {
+    .title {
+      &::after {
+        @include triangleBgStyle();
+      }
     }
-    
+  }
+
+  #contact {
+    height: 690px;
+
+    .content {
+      @include contentStyle(1.25rem, 1.85rem);
+    }
+  }
 }
 
+@media (min-width: 1441px) {
+  html {
+    scroll-padding-top: 85px;
+  }
 
-@media (min-width: 1441px){
+  #top {
+    height: 100vh;
 
-    html {
-        scroll-padding-top: 85px;
+    .logo a {
+      font-size: 5rem;
     }
 
-    #top {
-        height: 50vh;
-
-        .logo a{
-            font-size: 5rem;
-        }
-
-        .top-nav {
-            height: 85px;
-        }
-
-        .top-nav-ul li {
-            margin: 13px 65px;
-            width: 320px;
-            height: 50px;
-            font-size: 2rem;
-        }
-
-        #top-div {
-            @include bgImgStyle(35%);
-
-            h1 {
-                font-size: 10rem;
-                margin-bottom: -55px;
-            }
-
-            span {
-                font-size: 16rem;
-            }
-        }
-
-        #to-top-btn {
-            right: 0.5%;
-            bottom: 1%;
-        }
+    .top-nav {
+      height: 85px;
     }
 
-
-
-
-    #who-we-are {
-        height: 620px;
-
-        .title {
-            margin: 40px 0;
-
-            &::after {
-                @include triangleBgStyle();
-            }
-        }
-
-        .title h1 {
-            @include titleStyle(40%, 3rem, 0.2rem);
-        }
-
-        .content {
-            @include contentStyle(2.5rem, 3.5rem);
-        }
-
-        .btn {
-            @include btnStyle(1.75rem);
-        }
+    .top-nav-ul li {
+      margin: 13px 25px;
+      width: 225px;
+      height: 40px;
+      font-size: 1.25rem;
     }
 
+    #top-div {
+      @include bgImgStyle(45%);
 
+      h1 {
+        font-size: 10rem;
+        margin-bottom: -55px;
+      }
 
-
-    #past-cases {
-        height: 800px;
-
-        .title {
-            margin: 40px 0;
-
-            &::after {
-                @include triangleBgStyle();
-            }
-        }
-
-        .title h1 {
-            @include titleStyle(40%, 3rem, 0.2rem);
-        }
-
-        .content {
-            @include contentStyle(2.5rem, 3.5rem);
-        }
-        
-        .ex-tbl{
-            width: 100%;
-        }
-
-        .tbl-price {
-            padding-left: 60px;
-        }
-
-        .other-tbl {
-            margin: 0 auto;
-            width: 700px;
-        }
-
-        .notice {
-            font-size: 1.75rem;
-        }
-
-        .btn {
-            @include btnStyle(1.85rem);
-            width: 230px;
-        }
+      span {
+        font-size: 16rem;
+      }
     }
 
-
-    #contact {
-        height: 50vh;
-        @include bgImgStyle(40%);
-
-        .title h1 {
-            @include titleStyle(40%, 3rem, 0.2rem);
-            margin-top: 40px;
-        }
-    
-        .content {
-            @include contentStyle(2.5rem, 3.5rem);
-    
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0 40px;
-        }
-    
-        input {
-            margin: 30px 0 20px 0;
-        }
-    
-        .btn {
-            
-            @include sendBtnStyle(170px, 65px, 2.5rem);
-            margin: 50px 0;
-        }
-
-        iframe {
-            width: 100%;
-            height: 500px;
-        }
+    #to-top-btn {
+      right: 1%;
+      bottom: 1.5%;
     }
+  }
+
+  #who-we-are {
+    height: 700px;
+
+    .title {
+      margin: 40px 0;
+
+      &::after {
+        @include triangleBgStyle();
+      }
+    }
+
+    .title h1 {
+      @include titleStyle(40%, 3rem, 0.2rem);
+    }
+
+    .content {
+      @include contentStyle(2.5rem, 3.5rem);
+    }
+
+    .btn {
+      @include btnStyle(1.75rem);
+    }
+  }
+
+  #past-cases {
+    height: 930px;
+
+    .title {
+      margin: 40px 0;
+
+      &::after {
+        @include triangleBgStyle();
+      }
+    }
+
+    .title h1 {
+      @include titleStyle(40%, 3rem, 0.2rem);
+    }
+
+    .content {
+      @include contentStyle(2.5rem, 3.5rem);
+    }
+
+    .ex-tbl {
+      width: 100%;
+    }
+
+    .tbl-price {
+      padding-left: 60px;
+    }
+
+    .other-tbl {
+      margin: 0 auto;
+      width: 700px;
+    }
+
+    .notice {
+      font-size: 1.75rem;
+    }
+
+    .btn {
+      @include btnStyle(1.85rem);
+      width: 230px;
+    }
+  }
+
+  #contact {
+    height: 100vh;
+    @include bgImgStyle(57%);
+
+    .title h1 {
+      @include titleStyle(40%, 3rem, 0.2rem);
+      margin-top: 40px;
+    }
+
+    .content {
+      @include contentStyle(2.5rem, 3.5rem);
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 40px;
+    }
+
+    input {
+      margin: 30px 0 20px 0;
+    }
+
+    .btn {
+      @include sendBtnStyle(170px, 65px, 2.5rem);
+      margin: 50px 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+    }
+  }
 }
 
+@media (min-width: 2560px) {
+  html {
+    scroll-padding-top: 85px;
+  }
+
+  #top {
+    height: 50vh;
+
+    .logo a {
+      font-size: 5rem;
+    }
+
+    .top-nav {
+      height: 85px;
+    }
+
+    .top-nav-ul li {
+      margin: 13px 65px;
+      width: 320px;
+      height: 50px;
+      font-size: 2rem;
+    }
+
+    #top-div {
+      @include bgImgStyle(35%);
+
+      h1 {
+        font-size: 10rem;
+        margin-bottom: -55px;
+      }
+
+      span {
+        font-size: 16rem;
+      }
+    }
+
+    #to-top-btn {
+      right: 0.5%;
+      bottom: 1%;
+    }
+  }
+
+  #who-we-are {
+    height: 620px;
+
+    .title {
+      margin: 40px 0;
+
+      &::after {
+        @include triangleBgStyle();
+      }
+    }
+
+    .title h1 {
+      @include titleStyle(40%, 3rem, 0.2rem);
+    }
+
+    .content {
+      @include contentStyle(2.5rem, 3.5rem);
+    }
+
+    .btn {
+      @include btnStyle(1.75rem);
+    }
+  }
+
+  #past-cases {
+    height: 800px;
+
+    .title {
+      margin: 40px 0;
+
+      &::after {
+        @include triangleBgStyle();
+      }
+    }
+
+    .title h1 {
+      @include titleStyle(40%, 3rem, 0.2rem);
+    }
+
+    .content {
+      @include contentStyle(2.5rem, 3.5rem);
+    }
+
+    .ex-tbl {
+      width: 100%;
+    }
+
+    .tbl-price {
+      padding-left: 60px;
+    }
+
+    .other-tbl {
+      margin: 0 auto;
+      width: 700px;
+    }
+
+    .notice {
+      font-size: 1.75rem;
+    }
+
+    .btn {
+      @include btnStyle(1.85rem);
+      width: 230px;
+    }
+  }
+
+  #contact {
+    height: 50vh;
+    @include bgImgStyle(40%);
+
+    .title h1 {
+      @include titleStyle(40%, 3rem, 0.2rem);
+      margin-top: 40px;
+    }
+
+    .content {
+      @include contentStyle(2.5rem, 3.5rem);
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 40px;
+    }
+
+    input {
+      margin: 30px 0 20px 0;
+    }
+
+    .btn {
+      @include sendBtnStyle(170px, 65px, 2.5rem);
+      margin: 50px 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+    }
+  }
+}
