@@ -1213,8 +1213,10 @@ footer p {
     letter-spacing: 0.25rem;
   }
   #top .top-nav-ul li {
-    margin: 13px 15px;
-    width: 140px;
+    margin: 13px 65px;
+    width: 210px;
+    height: 10px;
+    font-size: 1rem;
   }
   #top #top-div {
     background-image: url("../images/geometric_img.png");
